@@ -38,12 +38,12 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/vehicles">
-                  Vehicles
+                  About
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
-                  About
+                  Propertis
                 </Link>
               </li>
               <li className="nav-item">
@@ -76,10 +76,10 @@ const Header = () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="li li2">
-                <Link to="/vehicles">Vehicles</Link>
+                <Link to="/vehicles">About</Link>
               </li>
               <li className="li li3">
-                <Link to="/about">About</Link>
+                <Link to="/about">Propertis</Link>
               </li>
               <li className="li li4">
                 <a href="#testimonials">Testimonials</a>
@@ -116,7 +116,7 @@ const Header = () => {
           </Button>
           <div>
             <i className="fa-regular fa-circle-user account"></i>
-            <i class="fa-solid fa-angle-up"></i>
+            <i className="fa-solid fa-angle-up"></i>
           </div>
         </div>
       </div>
