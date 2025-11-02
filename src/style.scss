@@ -395,6 +395,8 @@ body {
       .li a {
         text-decoration: none;
         color: #d8ccccfc;
+        white-space: normal;
+        overflow-wrap: break-word;
       }
       .nav-child3 i {
         color: #d8ccccfc;
@@ -2325,6 +2327,10 @@ ul {
 .abt-descrp {
   max-width: 580px;
 }
+.abt-descrp p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 .icons-cont i {
   font-size: 2.3rem;
 }
@@ -2361,6 +2367,8 @@ ul {
   max-width: 1020px;
   font-size: 1.1rem;
   margin: 0 4rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .about .step {
   padding-bottom: 10rem;
@@ -2410,6 +2418,9 @@ ul {
 }
 
 @media screen and (max-width: 900px) {
+  .about-topic-cont p {
+    margin: 0 1rem;
+  }
   .about-topic-cont {
     display: flex;
     flex-direction: column-reverse;
