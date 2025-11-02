@@ -1,12 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Step = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="step">
       <div className="step-main-cont1">
-        <p>How It Works</p>
+        <p>{t("how_it_works")}</p>
         <img src="hr.svg" alt="divider" />
-        <h1>Three Quick and Easy Steps</h1>
+        <h1>{t("three_quick_steps")}</h1>
       </div>
 
       <div className="step-main-cont2">
@@ -16,11 +19,9 @@ const Step = () => {
           <div className="icon-wrap" aria-hidden="true">
             <i className="fa-solid fa-right-to-bracket fa-2x" title="Login"></i>
           </div>
-          <h6 id="step1-title">Log in & Search</h6>
+          <h6 id="step1-title">{t("login_and_search")}</h6>
           <p>
-            Create an account or sign in, then search homes using filters like
-            location, price and amenities. Browse high-resolution photos and map
-            views to quickly shortlist properties that match your needs.
+            {t("login_and_search_p")}
           </p>
         </div>
 
@@ -32,11 +33,9 @@ const Step = () => {
               title="Contact Owner / Apply"
             ></i>
           </div>
-          <h6 id="step2-title">Contact Owner & Apply</h6>
+          <h6 id="step2-title">{t("contact_owner_and_apply")}</h6>
           <p>
-            Message or call the owner directly from the listing. Submit
-            applications, upload required documents, and track your application
-            status — all within the platform for a secure and transparent process.
+            {t("contact_owner_and_apply_p")}
           </p>
         </div>
 
@@ -48,11 +47,9 @@ const Step = () => {
               title="Move In"
             ></i>
           </div>
-          <h6 id="step3-title">Move In & Settle</h6>
+          <h6 id="step3-title">{t("move_in_and_settle")}</h6>
           <p>
-            Finalize agreements, arrange move-in details, and settle into your
-            new home. Use the platform to report issues, leave reviews, and
-            manage your tenancy going forward.
+            {t("move_in_and_settle_p")}
           </p>
         </div>
       </div>
