@@ -3,7 +3,7 @@ import Properties from "./components/Properties.tsx";
 import About from "./components/About.tsx";
 import Contact from "./components/Contact.tsx";
 import { MyProvider } from "./context/MyContext.tsx";
-import Header from "./components/Header.tsx";
+import Header from "./components/Home/Header.tsx";
 import { Route, Routes } from "react-router-dom";
 import { StyledEngineProvider } from "@mui/material/styles";
 import AOS from "aos";
@@ -23,7 +23,7 @@ function App() {
     <StyledEngineProvider injectFirst>
       <MyProvider>
         <div id="bd">
-          <HeaderV2 />
+          <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/vehicles" element={<Properties />}></Route>
