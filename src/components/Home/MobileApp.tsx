@@ -3,7 +3,7 @@ const MobileApp = () => {
     <div className="mobile">
       <div className="down-grid-cont">
         <div className="download-cont">
-          <h1>Download The Free Nova App</h1>
+          <h1>Download The Free bate App</h1>
           <p>for faster, easier rental and exclusive deals.</p>
           <div className="btn-cont">
             <button>

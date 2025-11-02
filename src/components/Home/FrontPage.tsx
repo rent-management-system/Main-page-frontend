@@ -6,7 +6,7 @@ const FrontPage = () => {
       <div className="front-child1">
         <h1>
           Your AI Rent Management System
-          <span className="nova"> Bate!</span>
+          <span className="bate"> Bate!</span>
         </h1>
         <button className="order">
           <a href="https://rental-user-management-frontend.vercel.app/login">Sign Up</a>{" "}

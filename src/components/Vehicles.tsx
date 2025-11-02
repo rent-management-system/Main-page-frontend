@@ -9,7 +9,7 @@ const Properties = () => {
       <img className="vh_bg1" src="back_n.png" alt="" />
         <div className="vh-topic-cont">
           <h1>Properties</h1>
-          <p>Explore wide range of vehicles from Nova</p>
+          <p>Explore wide range of vehicles from bate</p>
           <img src="hr.svg" alt="" />
         </div>
         <div className="vh-main-cont">
@@ -21,27 +21,27 @@ const Properties = () => {
               <img src="vh4.png" alt="" />
             </div>
             <div className="vh-descrp-cont">
-              <h1>Nova vehicles</h1>
+              <h1>bate vehicles</h1>
               <p>
-                Explore Nova's Properties Page for a curated collection of sleek
+                Explore bate's Properties Page for a curated collection of sleek
                 sedans, SUVs, high-performance sports cars, eco-friendly
                 electric/hybrid vehicles, family-friendly minivans, compact city
-                cars, and powerful trucks. Nova ensures you find the perfect
+                cars, and powerful trucks. bate ensures you find the perfect
                 ride for your lifestyle.
               </p>
               <ul>
                 <li>
-                  <b>Electric Propulsion:</b> Nova cars feature advanced
+                  <b>Electric Propulsion:</b> bate cars feature advanced
                   electric propulsion for eco-friendly, high-performance
                   driving.
                 </li>
                 <li>
-                  <b>Aerodynamic Design:</b> Nova vehicles showcase a
+                  <b>Aerodynamic Design:</b> bate vehicles showcase a
                   fuel-efficient, aerodynamic design for a modern and visually
                   striking aesthetic.
                 </li>
                 <li>
-                  <b>Connectivity Suite:</b> Nova's futuristic connectivity
+                  <b>Connectivity Suite:</b> bate's futuristic connectivity
                   suite seamlessly integrates navigation, entertainment, and
                   interaction for an enhanced driving experience.
                 </li>

@@ -53,7 +53,7 @@ const Contact = () => {
           </div>
           <div className="info-cont">
             <i className="fa-regular fa-envelope"></i>
-            <p>Nova@gmail.com</p>
+            <p>bate@gmail.com</p>
           </div>
           <div className="info-cont">
             <i className="fa-solid fa-location-dot"></i>

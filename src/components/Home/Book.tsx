@@ -99,7 +99,7 @@ const Book = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post("https://nova-cars-api.vercel.app/server", formData);
+      await axios.post("https://bate-cars-api.vercel.app/server", formData);
       console.log(`Your data has been submitted successfully!`, formData);
     } catch (err) {
       console.log("the error is" + err);

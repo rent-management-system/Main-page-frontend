@@ -18,9 +18,9 @@ const Testimonial = () => {
             ></i>
 
             <p>
-              Nova exceeded my expectations for online car buying. The website's
+              bate exceeded my expectations for online car buying. The website's
               simplicity, detailed info, and secure process made it a great
-              experience. I highly recommend Nova for anyone looking for an easy
+              experience. I highly recommend bate for anyone looking for an easy
               and reliable way to purchase a car
             </p>
           </div>
@@ -43,9 +43,9 @@ const Testimonial = () => {
               style={{ color: "#ffffff" }}
             ></i>
             <p>
-              I found my dream home on Nova's website, and it was a breeze to
+              I found my dream home on bate's website, and it was a breeze to
               buy. The website is user-friendly, the car options are diverse,
-              and the whole process is transparent and efficient. Nova is my
+              and the whole process is transparent and efficient. bate is my
               go-to for hassle-free online car shopping.
             </p>
           </div>
