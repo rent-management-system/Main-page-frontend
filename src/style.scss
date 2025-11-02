@@ -197,9 +197,16 @@ body {
     margin-left: 300px;
   }
 }
-#bd .nav-child2b {
-  display: none;
+
+@media screen and (min-width: 1041px) {
+  #bd .nav-child2a {
+    display: flex !important; /* Make main nav visible and horizontal */
+  }
+  #bd .nav-child2b {
+    display: none !important; /* Hide mobile nav */
+  }
 }
+
 .sign {
   display: flex;
   padding: 0 2rem;

@@ -15,13 +15,7 @@ const FrontPage = () => {
           <Link to="/vehicles">View Properties</Link>
         </button>
       </div>
-      {/* <div className="front-child2">
-        <img className="car car1"     style={{ width: "1000px", height: "auto", display: "block", marginLeft: "300px" }}
-        src="hero-imag.png" alt="" />
-
-        <img className="car car2" 
-        src="hero-imag.png" alt="" />
-      </div> */}
+      
 
        <div className="front-child2">
         <img className="car car1" src="hero-imag.png" alt="" />
