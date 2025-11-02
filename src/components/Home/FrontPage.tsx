@@ -1,18 +1,21 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const FrontPage = () => {
+  const { t } = useTranslation();
   return (
     <div className="front">
     
       <div className="front-child1">
         <h1>
-          Your AI Rent Management System
-          <span className="bate"> Bate!</span>
+          {t('your_ai_rent_management_system')}
+          <span className="bate"> {t('bate_exclamation')}</span>
         </h1>
         <button className="order">
-          <a href="https://rental-user-management-frontend.vercel.app/login">Sign Up</a>{" "}
+          <a href="https://rental-user-management-frontend.vercel.app/login">{t('sign_up')}</a>{" "}
         </button>
         <button className="view">
-          <Link to="/vehicles">View Properties</Link>
+          <Link to="/vehicles">{t('view_properties')}</Link>
         </button>
       </div>
       
