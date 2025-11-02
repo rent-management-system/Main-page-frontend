@@ -2309,11 +2309,11 @@ ul {
   margin-top: 10rem;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 2rem;
 }
 .abt-main img {
-  max-width: 400px;
+  max-width: 500px;
 }
 .icons-cont img {
   max-width: 50px;
@@ -2341,29 +2341,17 @@ ul {
   white-space: nowrap;
 }
 .about-topic-cont {
-  display: grid;
-  grid-template: 1fr / 1fr;
   padding-top: 11px;
-  height: 100vh;
-}
-.about-topic-cont img:nth-child(1) {
-  grid-area: 1 / 1;
-  align-self: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  mix-blend-mode: darken;
-  z-index: -1;
-}
-.about-topic-cont img:nth-child(2) {
-  display: none;
 }
 .about-topic-cont div {
-  grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 6rem;
+}
+
+.about-topic img {
+  max-width: 9rem;
 }
 .about-topic-cont h1 {
   font-weight: 900;

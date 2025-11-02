@@ -1,6 +1,5 @@
 import Home from "./components/Home.tsx";
 import Properties from "./components/Properties.tsx";
-import About from "./components/About.tsx";
 import Contact from "./components/Contact.tsx";
 import { MyProvider } from "./context/MyContext.tsx";
 import Header from "./components/Home/Header.tsx";
@@ -27,7 +26,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/vehicles" element={<Properties />}></Route>
-            <Route path="/about" element={<About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
         </div>

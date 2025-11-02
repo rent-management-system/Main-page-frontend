@@ -1,56 +1,66 @@
+import React from "react";
+
 const Step = () => {
   return (
     <div className="step">
       <div className="step-main-cont1">
         <p>How It Works</p>
-        <img src="hr.svg" alt="" />
+        <img src="hr.svg" alt="divider" />
         <h1>Three Quick and Easy Steps</h1>
       </div>
+
       <div className="step-main-cont2">
-        <div className="step1-cont">
-          <img className="select" src="select.svg" alt="" />
-          <h6>Select Property</h6>
+        {/* Step 1 */}
+        <div className="step1-cont" aria-labelledby="step1-title">
+          {/* descriptive icon replaces image */}
+          <div className="icon-wrap" aria-hidden="true">
+            <i className="fa-solid fa-right-to-bracket fa-2x" title="Login"></i>
+          </div>
+          <h6 id="step1-title">Log in & Search</h6>
           <p>
-            Explore and pick your dream home from our diverse collection,
-            featuring detailed specs and stunning visuals for an informed
-            decision.
-          </p>
-        </div>
-        <div className="step2-cont">
-          <img className="operat" src="operat.svg" alt="" />
-          <h6>Contact Operator</h6>
-          <p>
-            Connect with our operators effortlessly for quick assistance,
-            ensuring a smooth and expert-guided experience throughout your
-            property-rental process.
-          </p>
-        </div>
-        <div className="step3-cont">
-          <img className="drive" src="drive.svg" alt="" /> <h6>Lets Drive</h6>
-          <p>
-            Schedule a test drive easily, and immerse yourself in the driving
-            experience of your chosen vehicle at your convenience, making your
-            property selection a memorable journey.
-          </p>
-        </div>
-      </div>
-      <div className="bg">
-        <div>
-          <h4>
-            Save big on your dream home with our hassle-free online platform.
-          </h4>
-          <p>
-            Top Dealerships. Local Inventory. <b>24/7</b> Assistance.
+            Create an account or sign in, then search homes using filters like
+            location, price and amenities. Browse high-resolution photos and map
+            views to quickly shortlist properties that match your needs.
           </p>
         </div>
 
-        <div>
-          <img src="discount.svg" alt="" />
+        {/* Step 2 */}
+        <div className="step2-cont" aria-labelledby="step2-title">
+          <div className="icon-wrap" aria-hidden="true">
+            <i
+              className="fa-solid fa-phone fa-2x"
+              title="Contact Owner / Apply"
+            ></i>
+          </div>
+          <h6 id="step2-title">Contact Owner & Apply</h6>
           <p>
-            Limited-time offer! Book your car by <b>sep, 3, 2022</b> and get a
-            free upgrade.
+            Message or call the owner directly from the listing. Submit
+            applications, upload required documents, and track your application
+            status — all within the platform for a secure and transparent process.
           </p>
         </div>
+
+        {/* Step 3 */}
+        <div className="step3-cont" aria-labelledby="step3-title">
+          <div className="icon-wrap" aria-hidden="true">
+            <i
+              className="fa-solid fa-house-chimney-crack fa-2x"
+              title="Move In"
+            ></i>
+          </div>
+          <h6 id="step3-title">Move In & Settle</h6>
+          <p>
+            Finalize agreements, arrange move-in details, and settle into your
+            new home. Use the platform to report issues, leave reviews, and
+            manage your tenancy going forward.
+          </p>
+        </div>
+      </div>
+
+      <div>
+       
+
+        
       </div>
     </div>
   );

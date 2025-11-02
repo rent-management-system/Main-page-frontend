@@ -1,6 +1,7 @@
 import FrontPage from "./Home/FrontPage.tsx";
-// import Products from "./Home/Products.tsx";
-// import Testimonial from "./Home/Testimonial.tsx";
+import AboutSection from "./Home/AboutSection.tsx";
+//import Products from "./Home/Products.tsx";
+//import Testimonial from "./Home/Testimonial.tsx";
 import { useEffect } from "react";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
   return (
     <div>
       <FrontPage />
+      <AboutSection />
       {/* <Products />
       <Testimonial /> */}
     </div>

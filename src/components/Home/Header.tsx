@@ -43,15 +43,16 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/vehicles">
+                <a className="nav-link" href="/#about">
                   {t('about')}
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
-                  {t('properties')}
+                <Link className="nav-link" to="/vehicles">
+                  {t('Properties')}
                 </Link>
               </li>
+              
               <li className="nav-item">
                 <a className="nav-link" href="#testimonials">
                   {t('testimonials')}
@@ -81,12 +82,13 @@ const Header = () => {
               <li className="li li1">
                 <Link to="/">{t('home')}</Link>
               </li>
-              <li className="li li2">
-                <Link to="/vehicles">{t('about')}</Link>
-              </li>
               <li className="li li3">
-                <Link to="/about">{t('properties')}</Link>
+                <a href="/#about">{t('about')}</a>
               </li>
+              <li className="li li2">
+                <Link to="/vehicles">{t('Properties')}</Link>
+              </li>
+              
               <li className="li li4">
                 <a href="#testimonials">{t('testimonials')}</a>
               </li>
