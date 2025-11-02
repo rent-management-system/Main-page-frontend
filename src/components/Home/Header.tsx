@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
+  };
+
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -33,27 +39,27 @@ const Header = () => {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link active" to="/#">
-                  Home
+                  {t('home')}
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/vehicles">
-                  About
+                  {t('about')}
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
-                  Propertis
+                  {t('properties')}
                 </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#testimonials">
-                  Testimonials
+                  {t('testimonials')}
                 </a>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">
-                  Contact
+                  {t('contact')}
                 </Link>
               </li>
             </ul>
@@ -73,31 +79,35 @@ const Header = () => {
           <div id="nav" className={isNavOpen ? "show" : ""}>
             <ul className="ul">
               <li className="li li1">
-                <Link to="/">Home</Link>
+                <Link to="/">{t('home')}</Link>
               </li>
               <li className="li li2">
-                <Link to="/vehicles">About</Link>
+                <Link to="/vehicles">{t('about')}</Link>
               </li>
               <li className="li li3">
-                <Link to="/about">Propertis</Link>
+                <Link to="/about">{t('properties')}</Link>
               </li>
               <li className="li li4">
-                <a href="#testimonials">Testimonials</a>
+                <a href="#testimonials">{t('testimonials')}</a>
               </li>
               <li className="li li5">
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact">{t('contact')}</Link>
               </li>
               <li className="li">
-                  <button
-                    className="sign"
-                    onClick={() =>
-                      (window.location.href =
-                        "https://rental-user-management-frontend.vercel.app/login")
-                    }
-                  >
-                    Sign up &gt;
-                  </button>
-              </li>
+  <select
+    className="sign"
+    onChange={(e) => changeLanguage(e.target.value)}
+    value={i18n.language}
+  >
+    <option value="" disabled>
+      {t('select_language')}
+    </option>
+    <option value="am">{t('amharic_option')}</option>
+    <option value="en">{t('english_option')}</option>
+    <option value="om">{t('afan_oromo_option')}</option>
+  </select>
+</li>
+
 
             </ul>
           </div>
@@ -105,27 +115,46 @@ const Header = () => {
 
         <div className="nav-child3">
   <Button
-    variant="outlined"
-    sx={{
+  variant="outlined"
+  sx={{
+    width: "100%",
+    padding: "5px 1rem",
+    maxWidth: "120px",
+    fontSize: "14px",
+    textTransform: "capitalize",
+    color: "#000000",
+    border: "2px solid #222a2f",
+    "&:hover": {
+      backgroundColor: "#222a2f",
+      color: "white",
+      border: "2px solid #222a2f",
+    },
+  }}
+  // Remove onClick since we now use onChange of <select>
+>
+  <select
+    style={{
       width: "100%",
-      padding: "5px 1rem",
-      maxWidth: "100px",
+      border: "none",
+      background: "transparent",
       fontSize: "14px",
       textTransform: "capitalize",
+      cursor: "pointer",
+      outline: "none",
       color: "#000000",
-      border: "2px solid #222a2f",
-      "&:hover": {
-        backgroundColor: "#222a2f",
-        color: "white",
-        border: "2px solid #222a2f",
-      },
-      }}
-      onClick={() => {
-        window.location.href = "https://rental-user-management-frontend.vercel.app/login";
-      }}
-    >
-      Sign Up
-  </Button>
+    }}
+    value={i18n.language}
+    onChange={(e) => changeLanguage(e.target.value)}
+  >
+    <option value="" disabled>
+      {t('language')}
+    </option>
+    <option value="am">{t('amharic_option')}</option>
+    <option value="en">{t('english_option')}</option>
+    <option value="om">{t('afan_oromo_option')}</option>
+  </select>
+</Button>
+
   <div>
     <i className="fa-regular fa-circle-user account"></i>
     <i className="fa-solid fa-angle-up"></i>
