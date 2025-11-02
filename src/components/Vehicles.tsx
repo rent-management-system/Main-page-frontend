@@ -1,5 +1,5 @@
 import Products from "./Home/Products.tsx";
-import Header from "./Header.tsx";
+import Header from "./Home/Header.tsx";
 
 const Properties = () => {
   return (
