@@ -17,8 +17,8 @@ const Home = () => {
   return (
     <div>
       <FrontPage />
-      <Products />
-      <Testimonial />
+      {/* <Products />
+      <Testimonial /> */}
     </div>
   );
 };

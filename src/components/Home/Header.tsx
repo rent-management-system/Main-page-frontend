@@ -88,37 +88,50 @@ const Header = () => {
                 <Link to="/contact">Contact</Link>
               </li>
               <li className="li">
-                <button className="sign">Sign up &gt;</button>
-              </li>
+  <button
+    className="sign"
+    onClick={() =>
+      (window.location.href =
+        "https://rental-user-management-frontend.vercel.app/login")
+    }
+  >
+    Sign up &gt;
+  </button>
+</li>
+
             </ul>
           </div>
         </div>
 
         <div className="nav-child3">
-          <Button
-            variant="outlined"
-            sx={{
-              width: "100%",
-              padding: "5px 1rem",
-              maxWidth: "100px",
-              fontSize: "14px",
-              textTransform: "capitalize",
-              color: "#000000",
-              border: "2px solid #222a2f",
-              "&:hover": {
-                backgroundColor: "#222a2f",
-                color: "white",
-                border: "2px solid #222a2f",
-              },
-            }}
-          >
-            Sign Up
-          </Button>
-          <div>
-            <i className="fa-regular fa-circle-user account"></i>
-            <i className="fa-solid fa-angle-up"></i>
-          </div>
-        </div>
+  <Button
+    variant="outlined"
+    sx={{
+      width: "100%",
+      padding: "5px 1rem",
+      maxWidth: "100px",
+      fontSize: "14px",
+      textTransform: "capitalize",
+      color: "#000000",
+      border: "2px solid #222a2f",
+      "&:hover": {
+        backgroundColor: "#222a2f",
+        color: "white",
+        border: "2px solid #222a2f",
+      },
+    }}
+    onClick={() => {
+      window.location.href = "https://rental-user-management-frontend.vercel.app/login";
+    }}
+  >
+    Sign Up
+  </Button>
+  <div>
+    <i className="fa-regular fa-circle-user account"></i>
+    <i className="fa-solid fa-angle-up"></i>
+  </div>
+</div>
+
       </div>
     </nav>
   );
