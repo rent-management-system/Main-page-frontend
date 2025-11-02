@@ -88,16 +88,16 @@ const Header = () => {
                 <Link to="/contact">Contact</Link>
               </li>
               <li className="li">
-  <button
-    className="sign"
-    onClick={() =>
-      (window.location.href =
-        "https://rental-user-management-frontend.vercel.app/login")
-    }
-  >
-    Sign up &gt;
-  </button>
-</li>
+                  <button
+                    className="sign"
+                    onClick={() =>
+                      (window.location.href =
+                        "https://rental-user-management-frontend.vercel.app/login")
+                    }
+                  >
+                    Sign up &gt;
+                  </button>
+              </li>
 
             </ul>
           </div>
@@ -119,12 +119,12 @@ const Header = () => {
         color: "white",
         border: "2px solid #222a2f",
       },
-    }}
-    onClick={() => {
-      window.location.href = "https://rental-user-management-frontend.vercel.app/login";
-    }}
-  >
-    Sign Up
+      }}
+      onClick={() => {
+        window.location.href = "https://rental-user-management-frontend.vercel.app/login";
+      }}
+    >
+      Sign Up
   </Button>
   <div>
     <i className="fa-regular fa-circle-user account"></i>
