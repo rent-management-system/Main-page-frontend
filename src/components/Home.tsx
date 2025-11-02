@@ -1,6 +1,6 @@
 import FrontPage from "./Home/FrontPage.tsx";
-import Products from "./Home/Products.tsx";
-import Testimonial from "./Home/Testimonial.tsx";
+// import Products from "./Home/Products.tsx";
+// import Testimonial from "./Home/Testimonial.tsx";
 import { useEffect } from "react";
 
 const Home = () => {
