@@ -1,4 +1,4 @@
-import Header from "./Header.tsx";
+import Header from "./Home/Header.tsx";
 import Footer from "./Footer.tsx";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";

@@ -100,7 +100,7 @@ const Products = () => {
           <div className="cars1-main">
             <div className="cars1-main-child">
               <div className="car-cont1">
-                <img className="f1-car" src="f1_car.jpg" alt="" />
+                <img className="f1-car" src="Pasted image.png" alt="" />
               </div>
               <div className="car-cont2">
                 <h1>Marcedes-Benz-CL5</h1>
@@ -127,7 +127,7 @@ const Products = () => {
             </div>
             <div className="cars2-main-child">
               <div className="car-cont1">
-                <img className="f2-car" src="f3_car.jpg" alt="" />
+                <img className="f2-car" src="Pasted image (3).png" alt="" />
               </div>
               <div className="car-cont2">
                 <h1>BMW M4</h1>
@@ -154,7 +154,7 @@ const Products = () => {
             </div>
             <div className="cars3-main-child">
               <div className="car-cont1">
-                <img className="f3-car" src="f2_car.jpg" alt="" />
+                <img className="f3-car" src="Pasted image (4).png" alt="" />
               </div>
               <div className="car-cont2">
                 <h1>Audi A1</h1>

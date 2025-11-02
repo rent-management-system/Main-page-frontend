@@ -188,6 +188,15 @@ body {
 .car2 {
   display: none;
 }
+
+@media screen and (min-width: 1041px) {
+  .car1 {
+    width: 1000px;
+    height: auto;
+    display: block;
+    margin-left: 300px;
+  }
+}
 #bd .nav-child2b {
   display: none;
 }
