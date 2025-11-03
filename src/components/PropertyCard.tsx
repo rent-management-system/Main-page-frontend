@@ -1,37 +1,37 @@
 import React from 'react';
 import type { Property } from '../types/property';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 interface PropertyCardProps {
   property: Property;
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
+  const { t } = useTranslation(); // Initialize useTranslation
+
   return (
     <div className="cars-cont" key={property.id}>
       <div className="car-info-cont1">
-        <h1>{property.name}</h1>
+        <h1>{t(property.name)}</h1> {/* Apply t() */}
         <div>
-          {/* Replaced car-centric icon/text with property-relevant ones */}
-          <i className="fa-solid fa-tag"></i> {/* Generic tag icon for "Available" or "For Rent" */}
-          <p>Available</p>
+          <i className="fa-solid fa-tag"></i>
+          <p>Available</p> {/* This could also be a translation key if needed */}
         </div>
       </div>
-      <img className={`prod ${property.type}`} src={property.image} alt={property.name} />
+      <img className={`prod ${property.type}`} src={property.image} alt={t(property.name)} /> {/* Apply t() to alt text */}
       <div className="car-info-cont2">
         <div className="car-info">
-          {/* Replaced gas pump icon with bed icon for bedrooms */}
           <i className="fa-solid fa-bed"></i>
-          <p>{property.bedrooms}</p>
-          {/* Removed manual/auto image as it's car-centric */}
-          <i className="fa-solid fa-couch"></i> {/* Icon for furnishing */}
-          <p>{property.furnishing}</p>
-          <img src="area.png" alt="Area" /> {/* Area icon seems fine */}
-          <p>{property.area}</p>
+          <p>{t(property.bedrooms)}</p> {/* Apply t() */}
+          <i className="fa-solid fa-couch"></i>
+          <p>{t(property.furnishing)}</p> {/* Apply t() */}
+          <img src="area.png" alt="Area" />
+          <p>{t(property.area)}</p> {/* Apply t() */}
         </div>
         <div className="buy">
           <a href="#rental"></a>
           <p>{property.price}</p>
-          <p>Reserve</p>
+          <p>Reserve</p> {/* This could also be a translation key if needed */}
         </div>
       </div>
     </div>
