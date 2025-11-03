@@ -48,9 +48,9 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/vehicles">
+                <a className="nav-link" href="/#product"> {/* Changed to a tag with href */}
                   {t('Properties')}
-                </Link>
+                </a>
               </li>
               
               <li className="nav-item">
