@@ -128,5 +128,18 @@
   "testimonial_1_profession": "Gorsaa IT",
   "testimonial_2_text": "Mana abjoo koo Baatee irratti argadhe, fi bituun salphaa ture. Weebsaayitiin isaa salphaatti kan fayyadamu, filannoowwan konkolaataa adda addaa qaba, fi adeemsi hunduu ifaa fi saffisaa ture. Baatee konkolaataa tolaan bitachuuf bakka koo isa jalqabaati.",
   "testimonial_2_name": "DAVID WILSON",
-  "testimonial_2_profession": "Ogeessa Marketing"
+  "testimonial_2_profession": "Ogeessa Marketing",
+
+  "faq_title": "Gaaffiilee Deddeebi'an",
+  "faq_description": "Gaaffiilee deddeebi'an waa'ee Sirna Bulchiinsa Kiraa keenyaa — akkaataa tarreewwan, kaffaltii, mirkaneessa, fi walqunnamtii kireeffataa fi abbaa manaa sagantaa irratti hojjetan.",
+  "faq_q1": "1. Gosa qabeenyaa akkamii tarreessuu ykn barbaaduu danda'a?",
+  "faq_a1": "Sagantaan keenya Apartimentoota, Kondominiyamoota, fi Manneen Dhuunfaa ni deegara — sireewwan, mana fincaa, bal'ina, bakka, fi suuraawwan waliin. Gatii, guyyaa argamummaa, fi tajaajilawwan irratti hundaa'uun filachuu ni dandeessa.",
+  "faq_q2": "2. Akkaataa kaffaltii-per-post abbootii manaa akkamitti hojjeta?",
+  "faq_a2": "Abbootiin manaa tarreeffama maxxansuuf kaffaltii tokko qofa kaffalu (galmee hin qabu). Kaffaltiin erga mirkanaa'ee booda tarreeffamni ni mul'ata. Kun baasii beeksisaa itti fufaa hir'isa fi abbootii qabeenyaa xixiqqaaaf gatii madaalawaa taasisa.",
+  "faq_q3": "3. Tarreewwan mirkanaa'oo dha moo akkamitti gowwoomsaa ittisuu dandeessu?",
+  "faq_a3": "Tarreewwan osoo hin maxxansin dura ni ilaalla fi ragaa barbaachisaa (ID, suuraawwan, odeeffannoo qunnamtii) ni gaafanna. Fayyadamtoonni tarreewwan shakkisiisoo gabaasuu ni danda'u; bulchitoonni gabaasota ni ilaalu fi qabiyyee sobaa ni balleessu. Mirkaneessuun rakkoo dogoggoraa hir'isa.",
+  "faq_q4": "4. Kaffaltii maxxansuuf mala kaffaltii akkamii deegartu?",
+  "faq_a4": "Kaffaltii maxxansuuf filannoowwan kaffaltii naannoo (maallaqa moobaayilaa fi karaalee naannoo) ni daballina. Kaffaltii kiraa ofii isaanii yeroo ammaa sagantaa ala ni hojjetu (maallaqa ykn baankii irra darbuun), fi kaffaltii kiraa guutuu dabaluuf karoora qabna.",
+  "faq_q5": "5. Akkamitti gargaarsa argachuu ykn rakkoo gabaasuu danda'a?",
+  "faq_a5": "Deeggarsa ykn tarreewwan gabaasuuf, fuula qunnamtii irratti argamu fayyadami ykn garee deeggarsa keenya support@example.com irratti ergaa ergi. Dhimmoota ariifachiisoo ta'aniif, odeeffannoon bilbila deeggarsaa naannoo fuula Waa'ee / Quunnamtii irratti argama."
 }
