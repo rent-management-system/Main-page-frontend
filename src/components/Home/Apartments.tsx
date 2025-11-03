@@ -3,7 +3,7 @@
 import ChooseUs from "./ChooseUs.tsx";
 import Testimonial from "./Testimonial.tsx";
 import BasicAccordion from "./Faq.tsx";
-import MobileApp from "./MobileApp.tsx";
+// import MobileApp from "./MobileApp.tsx";
 import Footer from "../Footer.tsx";
 
 interface SuvProps {
@@ -228,7 +228,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
       <ChooseUs />
       <Testimonial />
       <BasicAccordion />
-      <MobileApp />
+      {/* <MobileApp /> */}
       <Footer />
     </div>
   );

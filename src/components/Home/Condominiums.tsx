@@ -4,7 +4,7 @@
 import ChooseUs from "./ChooseUs.tsx";
 import Testimonial from "./Testimonial.tsx";
 import BasicAccordion from "./Faq.tsx";
-import MobileApp from "./MobileApp.tsx";
+
 import Footer from "../Footer.tsx";
 
 interface TruckProps {
@@ -235,7 +235,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
       <ChooseUs />
       <Testimonial />
       <BasicAccordion />
-      <MobileApp />
+     
       <Footer />
     </div>
   );

@@ -4,7 +4,7 @@
 import ChooseUs from "./ChooseUs.tsx";
 import Testimonial from "./Testimonial.tsx";
 import BasicAccordion from "./Faq.tsx";
-import MobileApp from "./MobileApp.tsx";
+
 import Footer from "../Footer.tsx";
 
 interface VanProps {
@@ -236,7 +236,7 @@ const Houses: React.FC<VanProps> = (props) => {
       <ChooseUs />
       <Testimonial />
       <BasicAccordion />
-      <MobileApp />
+    
       <Footer />
     </div>
   );
