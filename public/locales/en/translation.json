@@ -84,5 +84,22 @@
   "area_400_sqm": "400 m²",
   "area_300_sqm": "300 m²",
   "area_350_sqm": "350 m²",
-  "area_280_sqm": "280 m²"
+  "area_280_sqm": "280 m²",
+
+  "featured_listings_title": "FEATURED LISTINGS",
+  "featured_listings_description": "Handpicked properties — apartments, condominiums, and private houses selected for quality and value.",
+  "view_listing": "VIEW LISTING",
+  "location": "Location",
+  "area_label": "Area",
+  "available": "Available",
+  "listing_id": "Listing ID",
+  "bed_bath_balcony_2_1": "2 Bed · 1 Bath · Balcony",
+  "bed_bath_secure_3_2": "3 Bed · 2 Bath · Secure Complex",
+  "bed_bath_garden_4_3": "4 Bed · 3 Bath · Private Garden",
+  "location_addis_bole": "Addis Ababa, Bole",
+  "location_addis_kazanchis": "Addis Ababa, Kazanchis",
+  "location_adama_residential": "Adama, Residential Area",
+  "available_immediate": "Immediate",
+  "available_july_2025": "From July 2025",
+  "available_negotiable": "Negotiable"
 }

@@ -5,6 +5,9 @@ import Houses from "./Houses.tsx";
 import Condominiums from "./Condominiums.tsx";
 import Reserve from "./Reserve.tsx";
 import { MyContext } from "../../context/MyContext.tsx";
+import { useTranslation } from 'react-i18next';
+import { propertiesData } from "../../data/propertiesData.ts";
+import PropertyCard from "../PropertyCard.tsx";
 
 interface ClickedItemsState {
   A: boolean;
@@ -20,6 +23,7 @@ interface ClickedTabsState {
 }
 
 const Products = () => {
+  const { t } = useTranslation();
   const {} = useContext(MyContext) as any;
   const [clickedItems, setClickedItems] = useState<ClickedItemsState>({
     A: false,
@@ -68,97 +72,17 @@ const Products = () => {
       <div className="prod-cont">
         <div className="cars-child1">
           <div className="cars1-topic">
-            <h1>FEATURED LISTINGS</h1>
+            <h1>{t('featured_listings_title')}</h1>
             <img src="hr.svg" alt="" />
             <p>
-              Handpicked properties — apartments, condominiums, and private houses selected for quality and value.
+              {t('featured_listings_description')}
             </p>
           </div>
 
           <div className="cars1-main">
-            <div className="cars1-main-child">
-              <div className="car-cont1">
-                <img className="f1-car" src="Pasted image.png" alt="" />
-              </div>
-              <div className="car-cont2">
-                <h1>Sunrise Apartment (2-Bed)</h1>
-                <hr />
-                <div className="car-info-cont">
-                  <p>2 Bed · 1 Bath · Balcony</p>
-                  <p>$420 / month</p>
-                </div>
-                <ul>
-                  <li>Location: Addis Ababa, Bole</li>
-                  <li>Area: 120 m²</li>
-                  <li>Available: Immediate</li>
-                  <li>Listing ID: APT-SUN-402</li>
-                </ul>
-                <button
-                  onClick={() => {
-                    clickHandler("A");
-                  }}
-                  className={`feature-btn ${clickedItems.A ? "clicked" : ""}`}
-                >
-                  <a href="#rental">VIEW LISTING</a>
-                </button>
-              </div>
-            </div>
-
-            <div className="cars2-main-child">
-              <div className="car-cont1">
-                <img className="f2-car" src="Pasted image (3).png" alt="" />
-              </div>
-              <div className="car-cont2">
-                <h1>Riverside Condominium — Unit 5B</h1>
-                <hr />
-                <div className="car-info-cont">
-                  <p>3 Bed · 2 Bath · Secure Complex</p>
-                  <p>$750 / month</p>
-                </div>
-                <ul>
-                  <li>Location: Addis Ababa, Kazanchis</li>
-                  <li>Area: 140 m²</li>
-                  <li>Available: From July 2025</li>
-                  <li>Listing ID: CON-RIV-5B</li>
-                </ul>
-                <button
-                  onClick={() => {
-                    clickHandler("B");
-                  }}
-                  className={`feature-btn ${clickedItems.B ? "clicked" : ""}`}
-                >
-                  <a href="#rental">VIEW LISTING</a>
-                </button>
-              </div>
-            </div>
-
-            <div className="cars3-main-child">
-              <div className="car-cont1">
-                <img className="f3-car" src="Pasted image (4).png" alt="" />
-              </div>
-              <div className="car-cont2">
-                <h1>Garden Private House — Family Home</h1>
-                <hr />
-                <div className="car-info-cont">
-                  <p>4 Bed · 3 Bath · Private Garden</p>
-                  <p>$1,200 / month</p>
-                </div>
-                <ul>
-                  <li>Location: Adama, Residential Area</li>
-                  <li>Area: 250 m²</li>
-                  <li>Available: Negotiable</li>
-                  <li>Listing ID: HSE-GRD-01</li>
-                </ul>
-                <button
-                  onClick={() => {
-                    clickHandler("C");
-                  }}
-                  className={`feature-btn ${clickedItems.C ? "clicked" : ""}`}
-                >
-                  <a href="#rental">VIEW LISTING</a>
-                </button>
-              </div>
-            </div>
+            {propertiesData.slice(0, 3).map((property) => (
+              <PropertyCard key={property.id} property={property} />
+            ))}
           </div>
         </div>
 

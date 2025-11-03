@@ -84,5 +84,22 @@
   "area_400_sqm": "400 ካሬ ሜትር",
   "area_300_sqm": "300 ካሬ ሜትር",
   "area_350_sqm": "350 ካሬ ሜትር",
-  "area_280_sqm": "280 ካሬ ሜትር"
+  "area_280_sqm": "280 ካሬ ሜትር",
+
+  "featured_listings_title": "ተለይተው የቀረቡ ዝርዝሮች",
+  "featured_listings_description": "በጥራት እና በዋጋ የተመረጡ አፓርታማዎች፣ ኮንዶሚኒየሞች እና የግል ቤቶች።",
+  "view_listing": "ዝርዝር ይመልከቱ",
+  "location": "አካባቢ",
+  "area_label": "ስፋት",
+  "available": "ይገኛል",
+  "listing_id": "የዝርዝር መለያ",
+  "bed_bath_balcony_2_1": "2 መኝታ · 1 ገላ መታጠቢያ · በረንዳ",
+  "bed_bath_secure_3_2": "3 መኝታ · 2 ገላ መታጠቢያ · ደህንነቱ የተጠበቀ ግቢ",
+  "bed_bath_garden_4_3": "4 መኝታ · 3 ገላ መታጠቢያ · የግል የአትክልት ስፍራ",
+  "location_addis_bole": "አዲስ አበባ፣ ቦሌ",
+  "location_addis_kazanchis": "አዲስ አበባ፣ ካዛንቺስ",
+  "location_adama_residential": "አዳማ፣ የመኖሪያ አካባቢ",
+  "available_immediate": "አሁን ይገኛል",
+  "available_july_2025": "ከጁላይ 2025 ጀምሮ",
+  "available_negotiable": "በድርድር"
 }

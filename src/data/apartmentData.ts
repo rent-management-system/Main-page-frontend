@@ -1,4 +1,4 @@
-import { Property } from "../components/Home/AllProperties"; // Assuming Property interface is defined in AllProperties.tsx
+// import { Property } from "../components/Home/AllProperties"; // Assuming Property interface is defined in AllProperties.tsx
 
 export const apartmentData = [
   {
