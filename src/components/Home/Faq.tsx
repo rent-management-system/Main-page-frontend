@@ -33,9 +33,8 @@ export default function BasicAccordion() {
         <h3>FAQ</h3>
         <img src="hr.svg" alt="" />
         <p>
-          Frequently Asked Questions about our premier car sales platform.
-          Discover key information from most common questions asked and enhance
-          your experience with bate."
+          Frequently asked questions about our Rental Management System — how listings,
+          payments, verification and tenant-landlord interactions work on the platform.
         </p>
       </div>
 
@@ -61,16 +60,17 @@ export default function BasicAccordion() {
             id="panel1a-header"
             onClick={clickHandler1}
           >
-            <h5>1. What types of cars do you sell?</h5>
+            <h5>1. What property types can I list or search for?</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              We offer a diverse range of cars, including sedans, SUVs, trucks,
-              and more. Our inventory includes both new and used vehicles to
-              cater to different preferences and budgets.
+              Our platform supports Apartments, Condominiums and Private Houses — with
+              fields for bedrooms, bathrooms, area, location, and photos. You can also
+              filter by price, availability date and amenities to find the right match.
             </p>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           sx={{
             "& .MuiAccordionDetails-root": {
@@ -92,16 +92,17 @@ export default function BasicAccordion() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <h5>2. How much does shipping cost?</h5>
+            <h5>2. How does the pay-per-post model work for landlords?</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              Shipping costs vary based on your location and the size of the
-              vehicle. You can view the shipping cost during the checkout
-              process before completing your purchase.
+              Landlords pay a single posting fee to publish a listing (no subscription).
+              Once payment is confirmed the listing goes live. This reduces ongoing
+              advertising costs and improves affordability for small property owners.
             </p>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           sx={{
             "& .MuiAccordionDetails-root": {
@@ -123,17 +124,17 @@ export default function BasicAccordion() {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <h5>3. Is financing available for car purchases?</h5>
+            <h5>3. Are listings verified and how do you prevent scams?</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              Yes, we offer financing options to make your car purchase more
-              affordable. You can apply for financing during the checkout
-              process, and our finance team will guide you through the approval
-              process.
+              We review listings before publishing and require key details (ID, photos,
+              contact info). Users can report suspicious listings; admins review reports
+              and remove fraudulent content. Verification reduces misrepresentation risks.
             </p>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           sx={{
             "& .MuiAccordionDetails-root": {
@@ -155,16 +156,18 @@ export default function BasicAccordion() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <h5>4. Do you provide international shipping?</h5>
+            <h5>4. What payment methods are supported for posting fees?</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              Currently, we only offer shipping within [your country/region].
-              However, we're exploring international shipping options, so stay
-              tuned for updates.
+              We integrate local-friendly payment options (mobile money and local gateways)
+              for posting fees. Rent payments themselves are handled outside the platform
+              in the current version (cash or bank transfer), with plans to add full rent
+              payment integration later.
             </p>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           sx={{
             "& .MuiAccordionDetails-root": {
@@ -186,13 +189,13 @@ export default function BasicAccordion() {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <h5>5. How can I contact your customer support?</h5>
+            <h5>5. How can I get help or report a problem?</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              You can reach our customer support team via support@bate.com,
-              +1-555-123-4567, or through the contact form on our website. We
-              are here to assist you with any questions or concerns.
+              For support or to report listings, use the contact form on the site or
+              email our support team at support@example.com. For urgent matters, local
+              phone support details are available on the About / Contact page.
             </p>
           </AccordionDetails>
         </Accordion>

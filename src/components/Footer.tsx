@@ -37,16 +37,17 @@ const Footer = () => {
       <div className="footer-childs">
         <h1>bate Properties</h1>
         <p>
-          We offers a big range of vehicles for all your driving needs. We have
-          the perfect car to meet your needs.
+          A trusted platform connecting landlords and tenants across Ethiopia.
+          List properties with an affordable pay-per-post model or find verified
+          apartments, condominiums and private houses near you.
         </p>
         <div className="info-cont">
           <i className="fa-solid fa-square-phone"></i>
-          <p>(123) -456-789</p>
+          <p>+251 911 123 456</p>
         </div>
         <div className="info-cont">
           <i className="fa-regular fa-envelope"></i>
-          <p>bate@gmail.com</p>
+          <p>support@bate.com</p>
         </div>
 
         <div className="social-cont">
@@ -58,21 +59,21 @@ const Footer = () => {
       </div>
       <div className="footer-childs">
         <h1>COMPANY</h1>
-        <a href="#/">New York</a>
-        <a href="#/">Brand</a>
-        <a href="#/">property managers</a>
-        <a href="#/">property reviews</a>
-        <a href="#/">how we work</a>
+        <a href="#/">About Us</a>
+        <a href="#/">For Landlords</a>
+        <a href="#/">Property Managers</a>
+        <a href="#/">Reviews</a>
+        <a href="#/">How It Works</a>
       </div>
       <div className="footer-childs">
         <h1>WORKING HOURS</h1>
-        <p>Mon - Fri: 9:00AM - 9:00PM</p>
-        <p>Sat: 9:00AM - 19:00PM</p>
+        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+        <p>Sat: 10:00 AM - 4:00 PM</p>
         <p>Sun: Closed</p>
       </div>
       <div className="footer-childs">
         <h1>SUBSCRIPTION</h1>
-        <p>Subscribe your Email address for latest news & updates.</p>
+        <p>Subscribe with your email to receive new listings and platform updates.</p>
         <form className="footer-form" ref={form} onSubmit={sendEmail}>
           <input
             type="email"
@@ -86,10 +87,10 @@ const Footer = () => {
           className="confirm-cont"
         >
           <img src="check.png" alt="" />
-          <p>Subscribed succesfully!</p>
+          <p>Subscribed successfully!</p>
         </div>
       </div>
-      <p className="copy">©2023, bate. All rights reserved.</p>
+      <p className="copy">©2025, bate Properties. All rights reserved.</p>
     </div>
   );
 };

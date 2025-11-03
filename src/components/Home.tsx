@@ -1,6 +1,6 @@
 import FrontPage from "./Home/FrontPage.tsx";
 import AboutSection from "./Home/AboutSection.tsx";
-//import Products from "./Home/Products.tsx";
+import Products from "./Home/Products.tsx";
 //import Testimonial from "./Home/Testimonial.tsx";
 import { useEffect } from "react";
 
@@ -19,8 +19,8 @@ const Home = () => {
     <div>
       <FrontPage />
       <AboutSection />
-      {/* <Products />
-      <Testimonial /> */}
+      <Products />
+      {/* <Testimonial /> */}
     </div>
   );
 };

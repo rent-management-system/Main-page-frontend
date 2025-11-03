@@ -1,6 +1,6 @@
 import Book from "./Book.tsx";
-import Client from "./Clients.tsx";
-import Step from "./Step.tsx";
+// import Client from "./Clients.tsx";
+// import Step from "./Step.tsx";
 import ChooseUs from "./ChooseUs.tsx";
 import Testimonial from "./Testimonial.tsx";
 import BasicAccordion from "./Faq.tsx";
@@ -11,7 +11,7 @@ interface VanProps {
   clickState: boolean;
 }
 
-const Van: React.FC<VanProps> = (props) => {
+const Houses: React.FC<VanProps> = (props) => {
   return (
     <div
       style={{
@@ -231,8 +231,8 @@ const Van: React.FC<VanProps> = (props) => {
         </div>
       </div>
       <Book />
-      <Client />
-      <Step />
+      {/* <Client />
+      <Step /> */}
       <ChooseUs />
       <Testimonial />
       <BasicAccordion />
@@ -242,4 +242,4 @@ const Van: React.FC<VanProps> = (props) => {
   );
 };
 
-export default Van;
+export default Houses;
