@@ -141,5 +141,24 @@
   "faq_q4": "4. Kaffaltii maxxansuuf mala kaffaltii akkamii deegartu?",
   "faq_a4": "Kaffaltii maxxansuuf filannoowwan kaffaltii naannoo (maallaqa moobaayilaa fi karaalee naannoo) ni daballina. Kaffaltii kiraa ofii isaanii yeroo ammaa sagantaa ala ni hojjetu (maallaqa ykn baankii irra darbuun), fi kaffaltii kiraa guutuu dabaluuf karoora qabna.",
   "faq_q5": "5. Akkamitti gargaarsa argachuu ykn rakkoo gabaasuu danda'a?",
-  "faq_a5": "Deeggarsa ykn tarreewwan gabaasuuf, fuula qunnamtii irratti argamu fayyadami ykn garee deeggarsa keenya support@example.com irratti ergaa ergi. Dhimmoota ariifachiisoo ta'aniif, odeeffannoon bilbila deeggarsaa naannoo fuula Waa'ee / Quunnamtii irratti argama."
+  "faq_a5": "Deeggarsa ykn tarreewwan gabaasuuf, fuula qunnamtii irratti argamu fayyadami ykn garee deeggarsa keenya support@example.com irratti ergaa ergi. Dhimmoota ariifachiisoo ta'aniif, odeeffannoon bilbila deeggarsaa naannoo fuula Waa'ee / Quunnamtii irratti argama.",
+
+  "footer_title": "Qabeenya Baatee",
+  "footer_description": "Sagantaa amanamummaa qabu kan abbootii manaa fi kireeffattoota Itoophiyaa keessatti walqunnamsiisu. Qabeenya gatii madaalawaa ‘pay-per-post’ jedhamuun tarreessi ykn apartimentoota, kondominiyamoota, fi manneen dhuunfaa mirkanaa’an naannoo kee barbaadi.",
+  "company_title": "KAMPAANII",
+  "about_us_link": "Waa'ee Keenya",
+  "for_landlords_link": "Abbootii Manaatiif",
+  "property_managers_link": "Bulchitoota Qabeenyaa",
+  "reviews_link": "Yaada",
+  "how_it_works_link": "Akkaataa Hojii Isaa",
+  "working_hours_title": "SA'AA HOJII",
+  "working_hours_mon_fri": "Wixata - Jimaata: 9:00 AM - 6:00 PM",
+  "working_hours_sat": "Sanbata: 10:00 AM - 4:00 PM",
+  "working_hours_sun": "Dilbata: Cufaa",
+  "subscription_title": "GALMEE",
+  "subscription_description": "Tarreewwan haaraa fi odeeffannoo sagantaa argachuuf imeelii keetiin galmaa'i.",
+  "enter_email_placeholder": "Imeelii Galchi",
+  "send_button": "Ergi",
+  "subscribed_success_message": "Milkaa'inaan Galmaa'e!",
+  "copyright_text": "©2025, Qabeenya Baatee. Mirgoonni Hunduu Eegamaadha."
 }
