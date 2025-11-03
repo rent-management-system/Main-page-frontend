@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import AllProperties from "./AllProperties.tsx";
 import Apartments from "./Apartments.tsx";
 import Houses from "./Houses.tsx";
 import Condominiums from "./Condominiums.tsx";
@@ -204,9 +205,10 @@ const Products = () => {
                 <p>Private Houses</p>
               </div>
             </div>
-            <Apartments clickState={clickedTabs.A || clickedTabs.B} />
-            <Condominiums clickState={clickedTabs.A || clickedTabs.C} />
-            <Houses clickState={clickedTabs.A || clickedTabs.D} />
+            {clickedTabs.A && <AllProperties clickState={true} />}
+            {clickedTabs.B && <Apartments clickState={true} />}
+            {clickedTabs.C && <Condominiums clickState={true} />}
+            {clickedTabs.D && <Houses clickState={true} />}
             <Reserve />
           </div>
         </div>
