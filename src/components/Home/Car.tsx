@@ -1,4 +1,4 @@
-import Book from "./Book.tsx";
+//import Book from "./Book.tsx";
 import Client from "./Clients.tsx";
 import Step from "./Step.tsx";
 import ChooseUs from "./ChooseUs.tsx";
@@ -223,7 +223,7 @@ const Property: React.FC<CarProps> = (props) => {
           </div>
         </div>
       </div>
-      <Book />
+      
       <Client />
       <Step />
       <ChooseUs />

@@ -1,4 +1,4 @@
-import Book from "./Book.tsx";
+//import Book from "./Book.tsx";
 // import Client from "./Clients.tsx";
 // import Step from "./Step.tsx";
 import ChooseUs from "./ChooseUs.tsx";
@@ -230,7 +230,7 @@ const Houses: React.FC<VanProps> = (props) => {
           </div>
         </div>
       </div>
-      <Book />
+      
       {/* <Client />
       <Step /> */}
       <ChooseUs />
