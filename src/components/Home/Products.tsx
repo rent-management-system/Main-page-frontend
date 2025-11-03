@@ -9,12 +9,6 @@ import { useTranslation } from 'react-i18next';
 import { propertiesData } from "../../data/propertiesData.ts";
 import PropertyCard from "../PropertyCard.tsx";
 
-interface ClickedItemsState {
-  A: boolean;
-  B: boolean;
-  C: boolean;
-}
-
 interface ClickedTabsState {
   A: boolean;
   B: boolean;
@@ -25,11 +19,6 @@ interface ClickedTabsState {
 const Products = () => {
   const { t } = useTranslation();
   const {} = useContext(MyContext) as any;
-  const [clickedItems, setClickedItems] = useState<ClickedItemsState>({
-    A: false,
-    B: false,
-    C: false,
-  });
   const [clickedTabs, setClickedTabs] = useState<ClickedTabsState>({
     A: true,
     B: false,
@@ -50,20 +39,6 @@ const Products = () => {
       }
       return prevValue;
     });
-  };
-
-  const clickHandler = (item: keyof ClickedItemsState) => {
-    setClickedItems((prevClickedItems) => ({
-      ...prevClickedItems,
-      [item]: !prevClickedItems[item],
-    }));
-
-    setTimeout(() => {
-      setClickedItems((prevClickedItems) => ({
-        ...prevClickedItems,
-        [item]: false,
-      }));
-    }, 300);
   };
 
   return (
