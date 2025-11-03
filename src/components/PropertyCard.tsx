@@ -24,7 +24,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           <i className="fa-solid fa-bed"></i>
           <p>{t(property.bedrooms)}</p> {/* Apply t() */}
           <i className="fa-solid fa-couch"></i>
-          <p>{t(property.furnishing)}</p> {/* Apply t() */}
+          <p>{t(`furnishing_${property.furnishing.toLowerCase()}`)}</p> {/* Apply t() */}
           <img src="area.png" alt="Area" />
           <p>{t(property.area)}</p> {/* Apply t() */}
         </div>
