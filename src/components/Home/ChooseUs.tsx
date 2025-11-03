@@ -6,7 +6,7 @@ const ChooseUs = () => {
       className="choose-us-cont"
       style={{ fontFamily: 'Montserrat, sans-serif' }}
     >
-      <img src="others.png" alt="" />
+      <img src="chus.png" alt="" />
       <div className="choose-main-cont">
         <div className="choose-cont1">
           <p>Why Choose Us</p>

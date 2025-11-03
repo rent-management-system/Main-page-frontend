@@ -28,7 +28,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod suv1" src="suv1.png" alt="" />
+          <img className="prod suv1" src="bate-1.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -78,7 +78,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod suv6" src="suv6.png" alt="" />
+          <img className="prod suv6" src="con-1.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -103,7 +103,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod suv suv4" src="suv4.png" alt="" />
+          <img className="prod suv suv4" src="bate-2.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -129,7 +129,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod suv suv5" src="suv5.png" alt="" />
+          <img className="prod suv suv5" src="con-1.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -154,7 +154,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod suv suv2" src="suv2.png" alt="" />
+          <img className="prod suv suv2" src="bate-3.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -179,7 +179,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod suv suv3" src="suv3.png" alt="" />
+          <img className="prod suv suv3" src="con-1.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -204,7 +204,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod suv8" src="suv8.png" alt="" />
+          <img className="prod suv8" src="bate-4.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
