@@ -119,5 +119,26 @@
   "customer_focused_experience_title": "Customer-Focused Experience",
   "customer_focused_experience_description": "Our platform is designed around your needs. From personalized property suggestions to real-time support, we make renting simple, secure, and stress-free for everyone.",
   "verified_listings_title": "Verified Listings",
+  "verified_listings_description": "Every property is reviewed and verified before going live. We ensure that all listings are authentic, safe, and meet quality standards — giving you peace of mind throughout your rental journey.",
+
+  "testimonial_title": "Testimonial",
+  "testimonial_description": "Explore testimonials and witness the positive changes our clients have experienced with us.",
+  "testimonial_1_text": "bate exceeded my expectations for online car buying. The website's simplicity, detailed info, and secure process made it a great experience. I highly recommend bate for anyone looking for an easy and reliable way to purchase a car",
+  "testimonial_1_name": "Jessica Kim",
+  "testimonial_1_profession": "IT Consultant",
+  "testimonial_2_text": "I found my dream home on bate's website, and it was a breeze to buy. The website is user-friendly, the car options are diverse, and the whole process is transparent and efficient. bate is my go-to for hassle-free online car shopping.",
+  "testimonial_2_name": "DAVID WILSON",
+  "testimonial_2_profession": "Marketing Specialist"
+},
+
+  "why_choose_us_title": "Why Choose Us",
+  "why_choose_us_heading": "Affordable, Transparent, and Hassle-Free Rentals",
+  "why_choose_us_description": "Discover a new way to rent or list properties with confidence. Our platform simplifies the rental process by offering transparent pricing, secure transactions, and multilingual support. Whether you're a landlord or a tenant, we provide a trusted digital space that connects you directly without brokers or hidden fees.",
+  "learn_more": "Learn More",
+  "transparent_pricing_title": "Transparent Pricing",
+  "transparent_pricing_description": "We believe in clarity and honesty — no hidden charges or unnecessary fees. Landlords list properties with a simple pay-per-post plan, while tenants browse and rent for free.",
+  "customer_focused_experience_title": "Customer-Focused Experience",
+  "customer_focused_experience_description": "Our platform is designed around your needs. From personalized property suggestions to real-time support, we make renting simple, secure, and stress-free for everyone.",
+  "verified_listings_title": "Verified Listings",
   "verified_listings_description": "Every property is reviewed and verified before going live. We ensure that all listings are authentic, safe, and meet quality standards — giving you peace of mind throughout your rental journey."
 }
