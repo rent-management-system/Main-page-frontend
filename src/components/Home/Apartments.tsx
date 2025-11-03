@@ -53,7 +53,7 @@ const Apartments: React.FC<SuvProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod suv7 suv" src="suv7.png" alt="" />
+          <img className="prod suv7 suv" src="Apa" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>

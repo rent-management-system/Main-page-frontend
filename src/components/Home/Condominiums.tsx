@@ -29,7 +29,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod truck1" src="truck1.png" alt="" />
+          <img className="prod truck1" src="con-6.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -55,7 +55,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod truck7" src="truck7.png" alt="" />
+          <img className="prod truck7" src="con-5.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -81,7 +81,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod truck2" src="truck2.png" alt="" />
+          <img className="prod truck2" src="con-4.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -107,7 +107,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod truck4" src="truck4.png" alt="" />
+          <img className="prod truck4" src="con-3.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -133,7 +133,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod  truck5" src="truck5.png" alt="" />
+          <img className="prod  truck5" src="con-2.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -158,7 +158,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod truck6" src="truck6.png" alt="" />
+          <img className="prod truck6" src="con-1.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -184,7 +184,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod truck3" src="truck3.png" alt="" />
+          <img className="prod truck3" src="con-2.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
@@ -210,7 +210,7 @@ const Condominiums: React.FC<TruckProps> = (props) => {
               <p>Free Supercharging</p>
             </div>
           </div>
-          <img className="prod truck8" src="truck8.png" alt="" />
+          <img className="prod truck8" src="con-3.png" alt="" />
           <div className="car-info-cont2">
             <div className="car-info">
               <i className="fa-solid fa-gas-pump"></i>
