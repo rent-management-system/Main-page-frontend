@@ -88,10 +88,10 @@ const Products = () => {
 
         <div className="cars-child2">
           <div className="cars2-topic">
-            <h1>PROPERTIES</h1>
+            <h1>{t('properties_title')}</h1>
             <img src="hr.svg" alt="" />
             <p>
-              Browse by type: Apartments, Condominiums, and Private Houses — tailored for Ethiopia's rental market.
+              {t('properties_description')}
             </p>
           </div>
           <div className="cars2-main">
@@ -102,7 +102,7 @@ const Products = () => {
                 }}
                 className={`tab-btns ${clickedTabs.A ? "tab-clicked" : ""}`}
               >
-                <p>All Properties</p>
+                <p>{t('all_properties')}</p>
               </div>
               <div
                 onClick={() => {
@@ -110,7 +110,7 @@ const Products = () => {
                 }}
                 className={`tab-btns ${clickedTabs.B ? "tab-clicked" : ""}`}
               >
-                <p>Apartments</p>
+                <p>{t('apartments')}</p>
               </div>
               <div
                 onClick={() => {
@@ -118,7 +118,7 @@ const Products = () => {
                 }}
                 className={`tab-btns ${clickedTabs.C ? "tab-clicked" : ""}`}
               >
-                <p>Condominiums</p>
+                <p>{t('condominiums')}</p>
               </div>
               <div
                 onClick={() => {
@@ -126,7 +126,7 @@ const Products = () => {
                 }}
                 className={`tab-btns ${clickedTabs.D ? "tab-clicked" : ""}`}
               >
-                <p>Private Houses</p>
+                <p>{t('private_houses')}</p>
               </div>
             </div>
             {clickedTabs.A && <AllProperties clickState={true} />}

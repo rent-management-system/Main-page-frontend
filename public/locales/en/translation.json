@@ -101,5 +101,23 @@
   "location_adama_residential": "Adama, Residential Area",
   "available_immediate": "Immediate",
   "available_july_2025": "From July 2025",
-  "available_negotiable": "Negotiable"
+  "available_negotiable": "Negotiable",
+
+  "properties_title": "PROPERTIES",
+  "properties_description": "Browse by type: Apartments, Condominiums, and Private Houses — tailored for Ethiopia's rental market.",
+  "all_properties": "All Properties",
+  "apartments": "Apartments",
+  "condominiums": "Condominiums",
+  "private_houses": "Private Houses",
+
+  "why_choose_us_title": "Why Choose Us",
+  "why_choose_us_heading": "Affordable, Transparent, and Hassle-Free Rentals",
+  "why_choose_us_description": "Discover a new way to rent or list properties with confidence. Our platform simplifies the rental process by offering transparent pricing, secure transactions, and multilingual support. Whether you're a landlord or a tenant, we provide a trusted digital space that connects you directly without brokers or hidden fees.",
+  "learn_more": "Learn More",
+  "transparent_pricing_title": "Transparent Pricing",
+  "transparent_pricing_description": "We believe in clarity and honesty — no hidden charges or unnecessary fees. Landlords list properties with a simple pay-per-post plan, while tenants browse and rent for free.",
+  "customer_focused_experience_title": "Customer-Focused Experience",
+  "customer_focused_experience_description": "Our platform is designed around your needs. From personalized property suggestions to real-time support, we make renting simple, secure, and stress-free for everyone.",
+  "verified_listings_title": "Verified Listings",
+  "verified_listings_description": "Every property is reviewed and verified before going live. We ensure that all listings are authentic, safe, and meet quality standards — giving you peace of mind throughout your rental journey."
 }

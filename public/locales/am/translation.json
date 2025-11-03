@@ -101,5 +101,23 @@
   "location_adama_residential": "አዳማ፣ የመኖሪያ አካባቢ",
   "available_immediate": "አሁን ይገኛል",
   "available_july_2025": "ከጁላይ 2025 ጀምሮ",
-  "available_negotiable": "በድርድር"
+  "available_negotiable": "በድርድር",
+
+  "properties_title": "ንብረቶች",
+  "properties_description": "በአይነት ያስሱ: አፓርታማዎች፣ ኮንዶሚኒየሞች፣ እና የግል ቤቶች — ለኢትዮጵያ የኪራይ ገበያ የተዘጋጁ።",
+  "all_properties": "ሁሉም ንብረቶች",
+  "apartments": "አፓርታማዎች",
+  "condominiums": "ኮንዶሚኒየሞች",
+  "private_houses": "የግል ቤቶች",
+
+  "why_choose_us_title": "ለምን እኛን ይመርጣሉ",
+  "why_choose_us_heading": "ተመጣጣኝ፣ ግልጽ እና ከችግር ነጻ የሆኑ ኪራዮች",
+  "why_choose_us_description": "ንብረቶችን በልበ ሙሉነት ለመከራየት ወይም ለመዘርዘር አዲስ መንገድ ያግኙ። የእኛ መድረክ ግልጽ ዋጋ አሰጣጥ፣ ደህንነቱ የተጠበቀ ግብይቶች እና የብዙ ቋንቋ ድጋፍ በማቅረብ የኪራይ ሂደቱን ያቃልላል። አከራይ ወይም ተከራይ ይሁኑ፣ እኛ ደላሎች ወይም የተደበቁ ክፍያዎች ሳይኖሩ በቀጥታ የሚያገናኝዎ የታመነ ዲጂታል ቦታ እናቀርባለን።",
+  "learn_more": "ተጨማሪ እወቅ",
+  "transparent_pricing_title": "ግልጽ ዋጋ አሰጣጥ",
+  "transparent_pricing_description": "በግልጽነት እና በታማኝነት እናምናለን - የተደበቁ ክፍያዎች ወይም አላስፈላጊ ክፍያዎች የሉም። አከራዮች ንብረቶችን በቀላል ክፍያ-በ-ፖስት እቅድ ይዘረዝራሉ፣ ተከራዮች ደግሞ በነጻ ያስሳሉ እና ይከራያሉ።",
+  "customer_focused_experience_title": "ደንበኛ ተኮር ተሞክሮ",
+  "customer_focused_experience_description": "የእኛ መድረክ በእርስዎ ፍላጎቶች ዙሪያ የተነደፈ ነው። ከግል የተበጁ የንብረት ጥቆማዎች እስከ ቅጽበታዊ ድጋፍ ድረስ፣ ለሁሉም ሰው ቀላል፣ ደህንነቱ የተጠበቀ እና ከጭንቀት ነጻ የሆነ ኪራይ እናደርጋለን።",
+  "verified_listings_title": "የተረጋገጡ ዝርዝሮች",
+  "verified_listings_description": "እያንዳንዱ ንብረት ከመታተሙ በፊት ይገመገማል እና ይረጋገጣል። ሁሉም ዝርዝሮች ትክክለኛ፣ ደህንነቱ የተጠበቀ እና የጥራት ደረጃዎችን የሚያሟሉ መሆናቸውን እናረጋግጣለን - በኪራይ ጉዞዎ በሙሉ የአእምሮ ሰላም ይሰጥዎታል።"
 }
