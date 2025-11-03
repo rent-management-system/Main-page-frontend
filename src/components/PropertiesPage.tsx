@@ -1,7 +1,7 @@
 import Products from "./Home/Products.tsx";
 import Header from "./Home/Header.tsx";
 
-const Properties = () => {
+const PropertiesPage = () => {
   return (
     <div className="vehicles">
       <Header />
@@ -58,4 +58,4 @@ const Properties = () => {
   );
 };
 
-export default Properties;
+export default PropertiesPage;

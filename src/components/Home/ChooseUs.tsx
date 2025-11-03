@@ -1,53 +1,52 @@
-import { Link } from "react-router-dom";
+
+
+import { useTranslation } from 'react-i18next';
 
 const ChooseUs = () => {
+  const { t } = useTranslation();
   return (
-    <div className="choose-us-cont">
-      <img src="others.png" alt="" />
+    <div
+      className="choose-us-cont"
+      style={{ fontFamily: 'Montserrat, sans-serif' }}
+    >
+      <img src="chus.png" alt="" />
       <div className="choose-main-cont">
         <div className="choose-cont1">
-          <p>Why Choose Us</p>
-          <h1>Unmatched Value with Budget Friendly Deals</h1>
+          <p>{t('why_choose_us_title')}</p>
+          <h1>{t('why_choose_us_heading')}</h1>
           <p>
-            Discover the best deals in affordability and value at our
-            dealership. We redefine your property-rental experience by ensuring that
-            every transaction offers unmatched value. With transparent pricing
-            and additional benefits, our commitment to providing exceptional
-            value sets us apart in the world of online car sales.
+            {t('why_choose_us_description')}
           </p>
-          <Link to="/about">Learn More</Link>
+          <a href="#about">{t('learn_more')}</a>
         </div>
+
         <div className="choose-cont2">
           <div className="choose-list-cont1">
             <img src="choose1.svg" alt="" />
             <div>
-              <h1>Fair Pricing</h1>
+              <h1>{t('transparent_pricing_title')}</h1>
               <p>
-                We prioritize transparent and fair property pricing, aiming to offer
-                customers competitive deals based on the true value of each
-                vehicle.
+                {t('transparent_pricing_description')}
               </p>
             </div>
           </div>
+
           <div className="choose-list-cont2">
             <img src="choose3.png" alt="" />
             <div>
-              <h1>Customer-Centric Approach</h1>
+              <h1>{t('customer_focused_experience_title')}</h1>
               <p>
-                We provide personalized, customer-centric service, understanding
-                your preferences and guiding you through the property-rental process
-                for complete satisfaction.
+                {t('customer_focused_experience_description')}
               </p>
             </div>
           </div>
+
           <div className="choose-list-cont3">
             <img src="choose2.svg" alt="" />
             <div>
-              <h1>Quality Assurance</h1>
+              <h1>{t('verified_listings_title')}</h1>
               <p>
-                Our commitment to value permeates every aspect of our service,
-                ensuring quality vehicles and transparent processes for an
-                exceptional property-rental experience.
+                {t('verified_listings_description')}
               </p>
             </div>
           </div>

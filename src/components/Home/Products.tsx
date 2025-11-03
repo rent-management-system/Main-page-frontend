@@ -1,10 +1,13 @@
 import { useState, useContext } from "react";
-import Property from "./Property.tsx";
-import Suv from "./Suv.tsx";
-import Van from "./Van.tsx";
-import Truck from "./Track.tsx";
+import AllProperties from "./AllProperties.tsx";
+import Apartments from "./Apartments.tsx";
+import Houses from "./Houses.tsx";
+import Condominiums from "./Condominiums.tsx";
 import Reserve from "./Reserve.tsx";
 import { MyContext } from "../../context/MyContext.tsx";
+import { useTranslation } from 'react-i18next';
+import { propertiesData } from "../../data/propertiesData.ts";
+import PropertyCard from "../PropertyCard.tsx";
 
 interface ClickedItemsState {
   A: boolean;
@@ -20,7 +23,8 @@ interface ClickedTabsState {
 }
 
 const Products = () => {
-  const { } = useContext(MyContext) as any;
+  const { t } = useTranslation();
+  const {} = useContext(MyContext) as any;
   const [clickedItems, setClickedItems] = useState<ClickedItemsState>({
     A: false,
     B: false,
@@ -36,37 +40,13 @@ const Products = () => {
   const handleClick = (tab: keyof ClickedTabsState) => {
     setClickedTabs((prevValue) => {
       if (tab === "A") {
-        return {
-          ...prevValue,
-          A: true,
-          B: false,
-          C: false,
-          D: false,
-        };
+        return { ...prevValue, A: true, B: false, C: false, D: false };
       } else if (tab === "B") {
-        return {
-          ...prevValue,
-          A: false,
-          B: true,
-          C: false,
-          D: false,
-        };
+        return { ...prevValue, A: false, B: true, C: false, D: false };
       } else if (tab === "C") {
-        return {
-          ...prevValue,
-          A: false,
-          B: false,
-          C: true,
-          D: false,
-        };
+        return { ...prevValue, A: false, B: false, C: true, D: false };
       } else if (tab === "D") {
-        return {
-          ...prevValue,
-          A: false,
-          B: false,
-          C: false,
-          D: true,
-        };
+        return { ...prevValue, A: false, B: false, C: false, D: true };
       }
       return prevValue;
     });
@@ -78,7 +58,6 @@ const Products = () => {
       [item]: !prevClickedItems[item],
     }));
 
-    // Delay execution for 0.3 seconds
     setTimeout(() => {
       setClickedItems((prevClickedItems) => ({
         ...prevClickedItems,
@@ -93,101 +72,26 @@ const Products = () => {
       <div className="prod-cont">
         <div className="cars-child1">
           <div className="cars1-topic">
-            <h1>FEATURED CARS</h1>
-            <img src="hr.svg" alt="" />
-            <p>“bate's Special Picks for Seamless City Driving.”</p>
-          </div>
-          <div className="cars1-main">
-            <div className="cars1-main-child">
-              <div className="car-cont1">
-                <img className="f1-car" src="Pasted image.png" alt="" />
-              </div>
-              <div className="car-cont2">
-                <h1>Marcedes-Benz-CL5</h1>
-                <hr />
-                <div className="car-info-cont">
-                  <p>S-Class Grandeur</p>
-                  <p>85,000$</p>
-                </div>
-                <ul>
-                  <li>Year: 2023</li>
-                  <li>Model: S-Class</li>
-                  <li>Mileage: 12,000 miles</li>
-                  <li>VIN: MBC123XYZ789456</li>
-                </ul>
-                <button
-                  onClick={() => {
-                    clickHandler("A");
-                  }}
-                  className={`feature-btn ${clickedItems.A ? "clicked" : ""}`}
-                >
-                  <a href="#rental">EXPLORE PRODUCT</a>
-                </button>
-              </div>
-            </div>
-            <div className="cars2-main-child">
-              <div className="car-cont1">
-                <img className="f2-car" src="Pasted image (3).png" alt="" />
-              </div>
-              <div className="car-cont2">
-                <h1>BMW M4</h1>
-                <hr />
-                <div className="car-info-cont">
-                  <p>Gran Turismo M4</p>
-                  <p>54,000$</p>
-                </div>
-                <ul>
-                  <li>Year: 2023</li>
-                  <li>Model: Turismo M4</li>
-                  <li>Mileage: 9,000 miles</li>
-                  <li>VIN: NMT123JKZ767944</li>
-                </ul>
-                <button
-                  onClick={() => {
-                    clickHandler("B");
-                  }}
-                  className={`feature-btn ${clickedItems.B ? "clicked" : ""}`}
-                >
-                  <a href="#rental">EXPLORE PRODUCT</a>
-                </button>
-              </div>
-            </div>
-            <div className="cars3-main-child">
-              <div className="car-cont1">
-                <img className="f3-car" src="Pasted image (4).png" alt="" />
-              </div>
-              <div className="car-cont2">
-                <h1>Audi A1</h1>
-                <hr />
-                <div className="car-info-cont">
-                  <p>A1 Hatchback</p>
-                  <p>25,400$</p>
-                </div>
-                <ul>
-                  <li>Year: 2023</li>
-                  <li>Model: A1 Hatchback</li>
-                  <li>Mileage: 10,000 miles</li>
-                  <li>VIN: HKL623DFG735667</li>
-                </ul>
-                <button
-                  onClick={() => {
-                    clickHandler("C");
-                  }}
-                  className={`feature-btn ${clickedItems.C ? "clicked" : ""}`}
-                >
-                  <a href="#rental">EXPLORE PRODUCT</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="cars-child2">
-          <div className="cars2-topic">
-            <h1>PRODUCTS</h1>
+            <h1>{t('featured_listings_title')}</h1>
             <img src="hr.svg" alt="" />
             <p>
-              “bate Properties: Builted for those who demand excellence, performance,
-              and a touch of luxury on the road.”
+              {t('featured_listings_description')}
+            </p>
+          </div>
+
+          <div className="cars1-main">
+            {propertiesData.slice(0, 3).map((property) => (
+              <PropertyCard key={property.id} property={property} />
+            ))}
+          </div>
+        </div>
+
+        <div className="cars-child2">
+          <div className="cars2-topic">
+            <h1>{t('properties_title')}</h1>
+            <img src="hr.svg" alt="" />
+            <p>
+              {t('properties_description')}
             </p>
           </div>
           <div className="cars2-main">
@@ -198,7 +102,7 @@ const Products = () => {
                 }}
                 className={`tab-btns ${clickedTabs.A ? "tab-clicked" : ""}`}
               >
-                <p>Properties</p>
+                <p>{t('all_properties')}</p>
               </div>
               <div
                 onClick={() => {
@@ -206,7 +110,7 @@ const Products = () => {
                 }}
                 className={`tab-btns ${clickedTabs.B ? "tab-clicked" : ""}`}
               >
-                <p>SUV/MUV</p>
+                <p>{t('apartments')}</p>
               </div>
               <div
                 onClick={() => {
@@ -214,7 +118,7 @@ const Products = () => {
                 }}
                 className={`tab-btns ${clickedTabs.C ? "tab-clicked" : ""}`}
               >
-                <p>Tracks</p>
+                <p>{t('condominiums')}</p>
               </div>
               <div
                 onClick={() => {
@@ -222,13 +126,13 @@ const Products = () => {
                 }}
                 className={`tab-btns ${clickedTabs.D ? "tab-clicked" : ""}`}
               >
-                <p>Vans</p>
+                <p>{t('private_houses')}</p>
               </div>
             </div>
-            <Property clickState={clickedTabs.A} />
-            <Suv clickState={clickedTabs.B} />
-            <Truck clickState={clickedTabs.C} />
-            <Van clickState={clickedTabs.D} />
+            {clickedTabs.A && <AllProperties clickState={true} />}
+            {clickedTabs.B && <Apartments clickState={true} />}
+            {clickedTabs.C && <Condominiums clickState={true} />}
+            {clickedTabs.D && <Houses clickState={true} />}
             <Reserve />
           </div>
         </div>

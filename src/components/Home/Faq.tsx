@@ -3,8 +3,10 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 export default function BasicAccordion() {
+  const { t } = useTranslation();
   const [isFaqButton1Clicked, setIsFaqButton1Clicked] = useState(false);
   const [isFaqButton2Clicked, setIsFaqButton2Clicked] = useState(false);
   const [isFaqButton3Clicked, setIsFaqButton3Clicked] = useState(false);
@@ -30,12 +32,10 @@ export default function BasicAccordion() {
   return (
     <div className="faq">
       <div className="faq-title-cont">
-        <h3>FAQ</h3>
+        <h3>{t('faq_title')}</h3>
         <img src="hr.svg" alt="" />
         <p>
-          Frequently Asked Questions about our premier car sales platform.
-          Discover key information from most common questions asked and enhance
-          your experience with bate."
+          {t('faq_description')}
         </p>
       </div>
 
@@ -61,16 +61,15 @@ export default function BasicAccordion() {
             id="panel1a-header"
             onClick={clickHandler1}
           >
-            <h5>1. What types of cars do you sell?</h5>
+            <h5>{t('faq_q1')}</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              We offer a diverse range of cars, including sedans, SUVs, trucks,
-              and more. Our inventory includes both new and used vehicles to
-              cater to different preferences and budgets.
+              {t('faq_a1')}
             </p>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           sx={{
             "& .MuiAccordionDetails-root": {
@@ -92,16 +91,15 @@ export default function BasicAccordion() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <h5>2. How much does shipping cost?</h5>
+            <h5>{t('faq_q2')}</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              Shipping costs vary based on your location and the size of the
-              vehicle. You can view the shipping cost during the checkout
-              process before completing your purchase.
+              {t('faq_a2')}
             </p>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           sx={{
             "& .MuiAccordionDetails-root": {
@@ -123,17 +121,15 @@ export default function BasicAccordion() {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <h5>3. Is financing available for car purchases?</h5>
+            <h5>{t('faq_q3')}</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              Yes, we offer financing options to make your car purchase more
-              affordable. You can apply for financing during the checkout
-              process, and our finance team will guide you through the approval
-              process.
+              {t('faq_a3')}
             </p>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           sx={{
             "& .MuiAccordionDetails-root": {
@@ -155,16 +151,15 @@ export default function BasicAccordion() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <h5>4. Do you provide international shipping?</h5>
+            <h5>{t('faq_q4')}</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              Currently, we only offer shipping within [your country/region].
-              However, we're exploring international shipping options, so stay
-              tuned for updates.
+              {t('faq_a4')}
             </p>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           sx={{
             "& .MuiAccordionDetails-root": {
@@ -186,13 +181,11 @@ export default function BasicAccordion() {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <h5>5. How can I contact your customer support?</h5>
+            <h5>{t('faq_q5')}</h5>
           </AccordionSummary>
           <AccordionDetails>
             <p>
-              You can reach our customer support team via support@bate.com,
-              +1-555-123-4567, or through the contact form on our website. We
-              are here to assist you with any questions or concerns.
+              {t('faq_a5')}
             </p>
           </AccordionDetails>
         </Accordion>

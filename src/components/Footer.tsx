@@ -1,7 +1,9 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [isSent, setIsSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
@@ -35,18 +37,17 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-childs">
-        <h1>bate Properties</h1>
+        <h1>{t('footer_title')}</h1>
         <p>
-          We offers a big range of vehicles for all your driving needs. We have
-          the perfect car to meet your needs.
+          {t('footer_description')}
         </p>
         <div className="info-cont">
           <i className="fa-solid fa-square-phone"></i>
-          <p>(123) -456-789</p>
+          <p>+251 911 123 456</p>
         </div>
         <div className="info-cont">
           <i className="fa-regular fa-envelope"></i>
-          <p>bate@gmail.com</p>
+          <p>support@bate.com</p>
         </div>
 
         <div className="social-cont">
@@ -57,41 +58,42 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-childs">
-        <h1>COMPANY</h1>
-        <a href="#/">New York</a>
-        <a href="#/">Brand</a>
-        <a href="#/">property managers</a>
-        <a href="#/">property reviews</a>
-        <a href="#/">how we work</a>
+        <h1>{t('company_title')}</h1>
+        <a href="#/">{t('about_us_link')}</a>
+        <a href="#/">{t('for_landlords_link')}</a>
+        <a href="#/">{t('property_managers_link')}</a>
+        <a href="#/">{t('reviews_link')}</a>
+        <a href="#/">{t('how_it_works_link')}</a>
       </div>
       <div className="footer-childs">
-        <h1>WORKING HOURS</h1>
-        <p>Mon - Fri: 9:00AM - 9:00PM</p>
-        <p>Sat: 9:00AM - 19:00PM</p>
-        <p>Sun: Closed</p>
+        <h1>{t('working_hours_title')}</h1>
+        <p>{t('working_hours_mon_fri')}</p>
+        <p>{t('working_hours_sat')}</p>
+        <p>{t('working_hours_sun')}</p>
       </div>
       <div className="footer-childs">
-        <h1>SUBSCRIPTION</h1>
-        <p>Subscribe your Email address for latest news & updates.</p>
+        <h1>{t('subscription_title')}</h1>
+        <p>{t('subscription_description')}</p>
         <form className="footer-form" ref={form} onSubmit={sendEmail}>
           <input
             type="email"
-            placeholder="Enter Email Address"
+            placeholder={t('enter_email_placeholder')}
             name="user_email"
           />
-          <input type="submit" value="Send" />
+          <input type="submit" value={t('send_button')} />
         </form>
         <div
           style={{ display: isSent ? "flex" : "none" }}
           className="confirm-cont"
         >
           <img src="check.png" alt="" />
-          <p>Subscribed succesfully!</p>
+          <p>{t('subscribed_success_message')}</p>
         </div>
       </div>
-      <p className="copy">©2023, bate. All rights reserved.</p>
+      <p className="copy">{t('copyright_text')}</p>
     </div>
   );
 };
 
 export default Footer;
+

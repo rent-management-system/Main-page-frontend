@@ -1,5 +1,4 @@
 import Home from "./components/Home.tsx";
-import Properties from "./components/Properties.tsx";
 import Contact from "./components/Contact.tsx";
 import { MyProvider } from "./context/MyContext.tsx";
 import Header from "./components/Home/Header.tsx";
@@ -8,6 +7,7 @@ import { StyledEngineProvider } from "@mui/material/styles";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import PropertiesPage from "./components/PropertiesPage.tsx"; // Import the new PropertiesPage component
 
 import "./style.scss";
 
@@ -25,7 +25,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/vehicles" element={<Properties />}></Route>
+            <Route path="/vehicles" element={<PropertiesPage />}></Route> {/* Use PropertiesPage here */}
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
         </div>
