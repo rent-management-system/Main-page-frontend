@@ -1,0 +1,199 @@
+/* Chatbot styles */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Keyframe animation for pop-up effect (for the icon) */
+@keyframes popup-bounce {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframe animation for the reminder text */
+@keyframes reminder-attention {
+  0% {
+    transform: translateX(10px) translateY(10px) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0) translateY(0) scale(1.1);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(0) translateY(0) scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(10px) translateY(10px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+
+.chatbot-icon {
+  background-color: #222a2f; /* Primary dark color */
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: popup-bounce 0.8s ease-out forwards; /* Apply the animation */
+  /* animation-delay: 5s; Removed this line */
+}
+
+.chatbot-icon:hover {
+  background-color: black; /* Slightly darker on hover */
+  transform: scale(1.05);
+}
+
+.chatbot-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.chatbot-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 450px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbot-header {
+  background-color: #222a2f; /* Primary dark color */
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: "Prosto One", sans-serif; /* Using a distinct heading font */
+}
+
+.chatbot-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.chatbot-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #f0f0f0; /* Light background */
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack messages vertically */
+}
+
+.chatbot-messages p {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Ensure long words break */
+  line-height: 1.4; /* Improve readability */
+}
+
+.chatbot-messages .user {
+  background-color: #e2e6ea; /* Light background for user messages */
+  color: #222a2f;
+  align-self: flex-start; /* Align user messages to the left */
+  margin-right: auto; /* Push user messages to the left */
+  border-bottom-left-radius: 2px; /* Slightly adjust border for visual appeal */
+}
+
+.chatbot-messages .bot {
+  background-color: #222a2f; /* Dark background for bot messages */
+  color: white;
+  align-self: flex-end; /* Align bot messages to the right */
+  margin-left: auto; /* Push bot messages to the right */
+  border-bottom-right-radius: 2px; /* Slightly adjust border for visual appeal */
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ced4da; /* Subtle border */
+}
+
+.chatbot-input input {
+  flex-grow: 1;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.chatbot-input button {
+  background-color: #222a2f; /* Primary dark color */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.chatbot-input button:hover {
+  background-color: black; /* Slightly darker on hover */
+}
+
+/* Styles for the reminder popup */
+.chatbot-reminder {
+  position: absolute;
+  bottom: 80px; /* Position above the icon */
+  right: 0;
+  background-color: #222a2f; /* Dark background */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  white-space: nowrap; /* Prevent text from wrapping */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(10px); /* Slight offset */
+  opacity: 0;
+  animation: reminder-attention 2s ease-in-out forwards; /* Apply the new animation */
+}

@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import PropertiesPage from "./components/PropertiesPage.tsx"; // Import the new PropertiesPage component
 
 import "./style.scss";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/vehicles" element={<PropertiesPage />}></Route> {/* Use PropertiesPage here */}
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
+          <Chatbot />
         </div>
       </MyProvider>
     </StyledEngineProvider>
