@@ -15,7 +15,7 @@ const FrontPage = () => {
           <a href="https://rental-user-management-frontend.vercel.app/login">{t('sign_up')}</a>{" "}
         </button>
         <button className="view">
-          <Link to="/vehicles">{t('view_properties')}</Link>
+          <a href="/#product">{t('view_properties')}</a>
         </button>
       </div>
       
