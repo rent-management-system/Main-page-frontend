@@ -160,5 +160,11 @@
   "enter_email_placeholder": "Enter Email Address",
   "send_button": "Send",
   "subscribed_success_message": "Subscribed successfully!",
-  "copyright_text": "©2025, bate Properties. All rights reserved."
+  "copyright_text": "©2025, bate Properties. All rights reserved.",
+  "ai_assistance_reminder": "Your AI Assistance is here!",
+  "your_ai_assistance": "Your AI Assistance",
+  "close_button": "X",
+  "initial_bot_message": "Hello! How can I help you today?",
+  "type_your_message": "Type your message...",
+  "send": "Send"
 }

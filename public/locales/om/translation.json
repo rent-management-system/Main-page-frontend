@@ -144,7 +144,7 @@
   "faq_a5": "Deeggarsa ykn tarreewwan gabaasuuf, fuula qunnamtii irratti argamu fayyadami ykn garee deeggarsa keenya support@example.com irratti ergaa ergi. Dhimmoota ariifachiisoo ta'aniif, odeeffannoon bilbila deeggarsaa naannoo fuula Waa'ee / Quunnamtii irratti argama.",
 
   "footer_title": "Qabeenya Baatee",
-  "footer_description": "Sagantaa amanamummaa qabu kan abbootii manaa fi kireeffattoota Itoophiyaa keessatti walqunnamsiisu. Qabeenya gatii madaalawaa ‘pay-per-post’ jedhamuun tarreessi ykn apartimentoota, kondominiyamoota, fi manneen dhuunfaa mirkanaa’an naannoo kee barbaadi.",
+  "footer_description": "Sagantaa amanamummaa qabu kan abbootii manaa fi kireeffattoota Itoophiyaa keessatti walqunnamsiisu. Qabeenya gatii madaalawaa 'pay-per-post' jedhamuun tarreessi ykn apartimentoota, kondominiyamoota, fi manneen dhuunfaa mirkanaa'an naannoo kee barbaadi.",
   "company_title": "KAMPAANII",
   "about_us_link": "Waa'ee Keenya",
   "for_landlords_link": "Abbootii Manaatiif",
@@ -160,5 +160,6 @@
   "enter_email_placeholder": "Imeelii Galchi",
   "send_button": "Ergi",
   "subscribed_success_message": "Milkaa'inaan Galmaa'e!",
-  "copyright_text": "©2025, Qabeenya Baatee. Mirgoonni Hunduu Eegamaadha."
+  "copyright_text": "©2025, Qabeenya Baatee. Mirgoonni Hunduu Eegamaadha.",
+  "ai_assistance_reminder": "Gargaarsi AI Kee As Jira!"
 }

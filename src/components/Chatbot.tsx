@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Chatbot.css';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 interface Message {
   text: string;
@@ -7,6 +8,7 @@ interface Message {
 }
 
 const Chatbot: React.FC = () => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { text: 'Hello! How can I help you today?', sender: 'bot' },
@@ -23,7 +25,7 @@ const Chatbot: React.FC = () => {
       }, 2000); // Show for 2 seconds
 
       return () => clearTimeout(hideTimer); // Cleanup hide timer
-    }, 20000); // Changed to 20 seconds (20000ms)
+    }, 20000); // Repeat every 20 seconds
 
     return () => clearInterval(reminderInterval); // Cleanup interval
   }, []); // Run only once on component mount
@@ -57,7 +59,7 @@ const Chatbot: React.FC = () => {
     <div className="chatbot-container">
       {showReminder && !isOpen && ( // Show reminder only if chat is not open
         <div className="chatbot-reminder">
-          Your AI Assistance is here!
+          {t('ai_assistance_reminder')} {/* Use translated text */}
         </div>
       )}
       <div className="chatbot-icon" onClick={toggleChat}>
@@ -69,7 +71,7 @@ const Chatbot: React.FC = () => {
       {isOpen && (
         <div className="chatbot-window">
           <div className="chatbot-header">
-            <h3>Your AI Assistance</h3>
+            <h3>{t('your_ai_assistance')}</h3> {/* Assuming you want to translate this too */}
             <button onClick={toggleChat}>X</button>
           </div>
           <div className="chatbot-messages">
@@ -82,12 +84,12 @@ const Chatbot: React.FC = () => {
           <div className="chatbot-input">
             <input
               type="text"
-              placeholder="Type your message..."
+              placeholder={t('type_your_message')} // Assuming you want to translate this
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
             />
-            <button onClick={handleSendMessage}>Send</button>
+            <button onClick={handleSendMessage}>{t('send')}</button> {/* Assuming you want to translate this */}
           </div>
         </div>
       )}
