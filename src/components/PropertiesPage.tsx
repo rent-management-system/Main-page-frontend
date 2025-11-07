@@ -1,24 +1,22 @@
 import Products from "./Home/Products.tsx";
-import Header from "./Home/Header.tsx";
 
 const PropertiesPage = () => {
   return (
     <div className="vehicles">
-      <Header />
       <div className="vh-cont">
-      <img className="vh_bg1" src="back_n.png" alt="" />
+      <img className="vh_bg1" src="/back_n.png" alt="" />
         <div className="vh-topic-cont">
           <h1>Properties</h1>
           <p>Explore wide range of vehicles from bate</p>
-          <img src="hr.svg" alt="" />
+          <img src="/hr.svg" alt="" />
         </div>
         <div className="vh-main-cont">
           <div>
             <div className="vh-car-cont">
-              <img src="vh.png" alt="" />
-              <img src="vh2.png" alt="" />
-              <img src="vh3.png" alt="" />
-              <img src="vh4.png" alt="" />
+              <img src="/vh.png" alt="" />
+              <img src="/vh2.png" alt="" />
+              <img src="/vh3.png" alt="" />
+              <img src="/vh4.png" alt="" />
             </div>
             <div className="vh-descrp-cont">
               <h1>bate vehicles</h1>
@@ -49,8 +47,8 @@ const PropertiesPage = () => {
               <a href="#rental">Book Your Property</a>
             </div>
           </div>
-          <img className="bg-vh-img" src="bg_vh_new.jpg" alt="" />
-          <img className="bg-vh-img2" src="bg_vehicle.jpg" alt="" />
+          <img className="bg-vh-img" src="/bg_vh_new.jpg" alt="" />
+          <img className="bg-vh-img2" src="/bg_vh.jpg" alt="" />
         </div>
       </div>
       <Products />

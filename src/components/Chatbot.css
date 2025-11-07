@@ -143,7 +143,7 @@
 }
 
 .chatbot-messages .bot {
-  background-color: #222a2f; /* Dark background for bot messages */
+  background-color: #222a2f; 
   color: white;
   align-self: flex-end; /* Align bot messages to the right */
   margin-left: auto; /* Push bot messages to the right */
