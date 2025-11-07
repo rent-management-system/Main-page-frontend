@@ -38,9 +38,10 @@ const Chatbot: React.FC = () => {
   const handleSendMessage = async () => {
     if (inputMessage.trim() !== '') {
       const newUserMessage: Message = { text: inputMessage, sender: 'user' };
-      setMessages((prevMessages) => [...prevMessages, newUserMessage]);
       const currentInput = inputMessage;
       setInputMessage('');
+
+      setMessages((prevMessages) => [...prevMessages, newUserMessage, { text: '', sender: 'bot' }]);
 
       const languageMap: { [key: string]: string } = {
         en: 'english',
@@ -67,12 +68,38 @@ const Chatbot: React.FC = () => {
         }
 
         const data = await response.json();
-        const botResponse: Message = { text: data.response, sender: 'bot' };
-        setMessages((prevMessages) => [...prevMessages, botResponse]);
+        const textToStream = data.response;
+        const words = textToStream.split(' ');
+        let wordIndex = 0;
+
+        const intervalId = setInterval(() => {
+          if (wordIndex < words.length) {
+            setMessages((prevMessages) => {
+              const newMessages = [...prevMessages];
+              const lastMessage = newMessages[newMessages.length - 1];
+              newMessages[newMessages.length - 1] = {
+                ...lastMessage,
+                text: lastMessage.text + ' ' + words[wordIndex],
+              };
+              return newMessages;
+            });
+            wordIndex++;
+          } else {
+            clearInterval(intervalId);
+          }
+        }, 100);
+
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
-        const botResponse: Message = { text: 'Sorry, something went wrong. Please try again later.', sender: 'bot' };
-        setMessages((prevMessages) => [...prevMessages, botResponse]);
+        setMessages((prevMessages) => {
+            const newMessages = [...prevMessages];
+            const lastMessage = newMessages[newMessages.length - 1];
+            newMessages[newMessages.length - 1] = {
+              ...lastMessage,
+              text: 'Sorry, something went wrong. Please try again later.',
+            };
+            return newMessages;
+          });
       }
     }
   };
