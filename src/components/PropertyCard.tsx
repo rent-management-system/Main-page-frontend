@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Property } from '../types/property';
 import { useTranslation } from 'react-i18next'; // Import useTranslation
-import { useMyContext } from '../context/MyContext'; // Import useMyContext
 
 interface PropertyCardProps {
   property: Property;
@@ -9,12 +8,6 @@ interface PropertyCardProps {
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   const { t } = useTranslation(); // Initialize useTranslation
-  const { handleButtonClick, setSelectedProperty } = useMyContext(); // Use the custom hook
-
-  const handleReserveClick = () => {
-    setSelectedProperty(property); // Set the selected property in context
-    handleButtonClick(); // Open the reservation modal
-  };
 
   return (
     <div className="cars-cont" key={property.id}>
@@ -38,7 +31,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
         <div className="buy">
           <a href="#rental"></a>
           <p>{property.price}</p>
-          <p onClick={handleReserveClick} style={{ cursor: 'pointer' }}>Reserve</p> {/* Make Reserve clickable */}
+          <a href="https://rental-user-management-frontend.vercel.app/login"><p>Reserve</p></a> {/* This could also be a translation key if needed */}
         </div>
       </div>
     </div>
