@@ -58,12 +58,14 @@ const Reserve = () => {
           <button onClick={handleCancel} className="lease-btn btn btn-dark">
             Cancel
           </button>
-          <button
-            onClick={handleReserve}
-            className="lease-btn btn btn-primary"
-          >
-            <p>Reserve</p>
-          </button>
+          <a href="https://rental-user-management-frontend.vercel.app/login">
+            <button
+              onClick={handleReserve}
+              className="lease-btn btn btn-primary"
+            >
+              <p>Reserve</p>
+            </button>
+          </a>
         </div>
       </div>
     </div>
