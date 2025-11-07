@@ -27,12 +27,12 @@ const Chatbot: React.FC = () => {
       return () => clearTimeout(hideTimer); // Cleanup hide timer
     }, 20000); // Repeat every 20 seconds
 
-    return () => clearInterval(reminderInterval); // Cleanup interval
-  }, []); // Run only once on component mount
+    return () => clearInterval(reminderInterval); 
+  }, []); 
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
-    setShowReminder(false); // Hide reminder when chat is opened
+    setShowReminder(false); 
   };
 
   const handleSendMessage = async () => {
