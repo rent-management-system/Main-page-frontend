@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { useMyContext } from "../../context/MyContext.tsx";
 
 const Reserve = () => {

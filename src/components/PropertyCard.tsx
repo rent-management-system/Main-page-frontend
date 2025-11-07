@@ -38,7 +38,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
         <div className="buy">
           <a href="#rental"></a>
           <p>{property.price}</p>
-          <p>Reserve</p> {/* This could also be a translation key if needed */}
+          <p onClick={handleReserveClick} style={{ cursor: 'pointer' }}>Reserve</p> {/* Make Reserve clickable */}
         </div>
       </div>
     </div>
