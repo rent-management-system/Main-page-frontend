@@ -8,7 +8,7 @@ interface Message {
 }
 
 const Chatbot: React.FC = () => {
-  const { t } = useTranslation(); // Initialize useTranslation hook
+  const { t, i18n } = useTranslation(); // Initialize useTranslation hook
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { text: 'Hello! How can I help you today?', sender: 'bot' },
@@ -35,17 +35,72 @@ const Chatbot: React.FC = () => {
     setShowReminder(false); // Hide reminder when chat is opened
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (inputMessage.trim() !== '') {
       const newUserMessage: Message = { text: inputMessage, sender: 'user' };
-      setMessages((prevMessages) => [...prevMessages, newUserMessage]);
+      const currentInput = inputMessage;
       setInputMessage('');
 
-      // Simulate a bot response
-      setTimeout(() => {
-        const botResponse: Message = { text: `You said: "${inputMessage}". How else can I assist?`, sender: 'bot' };
-        setMessages((prevMessages) => [...prevMessages, botResponse]);
-      }, 1000);
+      setMessages((prevMessages) => [...prevMessages, newUserMessage, { text: '', sender: 'bot' }]);
+
+      const languageMap: { [key: string]: string } = {
+        en: 'english',
+        am: 'amharic',
+        om: 'afaan_oromo',
+      };
+      
+      const currentLanguage = languageMap[i18n.language] || 'english';
+
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}chat`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            query: currentInput,
+            language: currentLanguage,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        const textToStream = data.response;
+        const words = textToStream.split(' ');
+        let wordIndex = 0;
+
+        const intervalId = setInterval(() => {
+          if (wordIndex < words.length) {
+            setMessages((prevMessages) => {
+              const newMessages = [...prevMessages];
+              const lastMessage = newMessages[newMessages.length - 1];
+              newMessages[newMessages.length - 1] = {
+                ...lastMessage,
+                text: lastMessage.text + ' ' + words[wordIndex],
+              };
+              return newMessages;
+            });
+            wordIndex++;
+          } else {
+            clearInterval(intervalId);
+          }
+        }, 100);
+
+      } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+        setMessages((prevMessages) => {
+            const newMessages = [...prevMessages];
+            const lastMessage = newMessages[newMessages.length - 1];
+            newMessages[newMessages.length - 1] = {
+              ...lastMessage,
+              text: 'Sorry, something went wrong. Please try again later.',
+            };
+            return newMessages;
+          });
+      }
     }
   };
 
