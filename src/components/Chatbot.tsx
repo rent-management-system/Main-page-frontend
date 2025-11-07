@@ -51,7 +51,7 @@ const Chatbot: React.FC = () => {
       const currentLanguage = languageMap[i18n.language] || 'english';
 
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}chat`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
