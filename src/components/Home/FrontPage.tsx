@@ -12,7 +12,8 @@ const FrontPage = () => {
           <span className="bate"> {t('bate_exclamation')}</span>
         </h1>
         <button className="order">
-          <a href="https://rental-user-management-frontend.vercel.app/login">{t('sign_up')}</a>{" "}
+          <a href="https://rental-user-management-frontend-sigma.vercel.app/login">{t('sign_up')}</a>{" "}
+          
         </button>
         <button className="view">
           <a href="/#product">{t('view_properties')}</a>
