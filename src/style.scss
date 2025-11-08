@@ -17,7 +17,7 @@ body {
 #bd .navbar {
   color: white;
   font-family: MBCorpo Title, sans-serif;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   position: absolute;
   width: 100%;
 }
@@ -45,13 +45,24 @@ body {
   color: #000000;
 }
 .logo {
-  width: 135px;
+  width: 90px;
 }
 .logo:nth-child(2) {
   position: absolute;
-  width: 29px;
-  top: 38px;
-  left: 56.5px;
+  width: 22px;
+  top: 15px;
+  left: 32.5px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 80px;
+  }
+  .logo:nth-child(2) {
+    width: 18px;
+    top: 18px;
+    left: 34.5px;
+  }
 }
 .logo2 {
   animation: rotating 5s linear infinite;

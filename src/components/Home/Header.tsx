@@ -20,8 +20,8 @@ const Header = () => {
       <div className="container-fluid nav-cont">
         <div className="nav-child1">
           <Link className="navbar-brand" to="/">
-            {/* <img className="logo logo1" src="bate.svg" alt="" />
-            <img className="logo logo2" src="tire.svg" alt="" /> */}
+             <img className="logo logo1" src="Black.png" alt="" />
+            {/* <img className="logo logo2" src="Black.png" alt="" />  */}
           </Link>
         </div>
 

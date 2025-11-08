@@ -9,10 +9,10 @@ const FrontPage = () => {
       <div className="front-child1">
         <h1>
           {t('your_ai_rent_management_system')}
-          <span className="bate"> {t('bate_exclamation')}</span>
+          <span className="bate"> {t('Bete_exclamation')}</span>
         </h1>
         <button className="order">
-          <a href="https://rental-user-management-frontend-sigma.vercel.app/login">{t('sign_up')}</a>{" "}
+          <a href="https://rental-user-management-frontend-sigma.vercel.app/">{t('sign_up')}</a>{" "}
           
         </button>
         <button className="view">
