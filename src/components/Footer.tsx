@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         <div className="info-cont">
           <i className="fa-regular fa-envelope"></i>
-          <p>support@bate.com</p>
+          <p>support@Bete.com</p>
         </div>
 
         <div className="social-cont">

@@ -49,15 +49,15 @@ const Contact = () => {
           </p>
           <div className="info-cont">
             <i className="fa-solid fa-square-phone"></i>
-            <p>(123) -456-789</p>
+            <p>(+251)912131415</p>
           </div>
           <div className="info-cont">
             <i className="fa-regular fa-envelope"></i>
-            <p>bate@gmail.com</p>
+            <p>Bete@gmail.com</p>
           </div>
           <div className="info-cont">
             <i className="fa-solid fa-location-dot"></i>
-            <p>Addis Ababa, Ethiopia</p>
+            <p>Adama, Ethiopia</p>
           </div>
         </div>
         <form className="contc-form" ref={form} onSubmit={sendEmail}>
