@@ -22,8 +22,8 @@ const FrontPage = () => {
       
 
        <div className="front-child2">
-        <img className="car car1" src="hero-imag.png" alt="" />
-        <img className="car car2" src="hero-imag2.png" alt="" />
+        <img className="car car1" src="pngwing.com.png" alt="" />
+        <img className="car car2"src="pngwing.com.png" alt="" />
       </div>
     </div>
   );
