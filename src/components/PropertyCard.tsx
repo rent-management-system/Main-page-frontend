@@ -29,8 +29,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           <p>{t(property.area)}</p> {/* Apply t() */}
         </div>
         <div className="buy">
-          <a href="#rental"></a>
-          <p>{property.price}</p>
+          {/* <a href="#rental"></a>
+          <p>{property.price}</p> */}
           <a href="https://rental-user-management-frontend.vercel.app/login"><p>Reserve</p></a> {/* This could also be a translation key if needed */}
         </div>
       </div>
