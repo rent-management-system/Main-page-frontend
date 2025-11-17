@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense, useState } from "react"; // Import lazy and Suspense
+import { useEffect, lazy, Suspense, useState } from "react"; // Import lazy and Suspense
 import { MyProvider } from "./context/MyContext.tsx";
 import Header from "./components/Home/Header.tsx";
 import { Route, Routes } from "react-router-dom";
