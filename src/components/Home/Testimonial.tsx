@@ -25,7 +25,7 @@ const Testimonial = () => {
           </div>
           <div className="photo-cont">
             <div>
-              <img src="photo.png" className="photo" alt="" />
+              <img src="Henok_photo.png" className="photo" alt="" />
             </div>
 
             <div>
@@ -47,7 +47,7 @@ const Testimonial = () => {
           </div>
           <div className="photo-cont">
             <div>
-              <img className="photo2" src="photo2.png"alt="" />
+              <img className="photo2" src="Damgamwi Teferi.png"alt="" />
             </div>
 
             <div>
