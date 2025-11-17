@@ -27,7 +27,7 @@ function App() {
     const t = setTimeout(() => {
       setShowSplash(false);
       document.body.classList.remove("loading");
-    }, 5000); // minimum 5s splash
+    }, 2000); // minimum 3s splash
     return () => clearTimeout(t);
   }, []);
   if (showSplash) {
