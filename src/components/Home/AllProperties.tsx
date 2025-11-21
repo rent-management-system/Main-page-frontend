@@ -3,7 +3,7 @@ import Testimonial from "./Testimonial.tsx";
 import BasicAccordion from "./Faq.tsx";
 import Footer from "../Footer.tsx";
 import PropertyCard from "../PropertyCard.tsx"; // Import the new PropertyCard component
-import { propertiesData } from "../../data/propertiesData.ts"; // Import the consolidated data
+import { getRandomAllProperties } from "../../data/propertiesData.ts"; // Import the random properties function
 import type { Property } from "../../types/property.ts"; // Import the Property interface
 
 interface AllPropertiesProps {
@@ -20,7 +20,7 @@ const AllProperties: React.FC<AllPropertiesProps> = (props) => {
       className="type-property type"
     >
       <div className="cars-main">
-        {propertiesData.slice(0, 12).map((property: Property) => ( // Added .slice(0, 12) here
+        {getRandomAllProperties().map((property: Property) => (
           <PropertyCard key={property.id} property={property} />
         ))}
       </div>

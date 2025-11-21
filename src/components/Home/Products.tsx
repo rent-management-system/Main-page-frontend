@@ -6,7 +6,7 @@ import Condominiums from "./Condominiums.tsx";
 import Reserve from "./Reserve.tsx";
 import { MyContext } from "../../context/MyContext.tsx";
 import { useTranslation } from 'react-i18next';
-import { propertiesData } from "../../data/propertiesData.ts";
+import { getRandomFeaturedProperties } from "../../data/propertiesData.ts";
 import PropertyCard from "../PropertyCard.tsx";
 
 interface ClickedTabsState {
@@ -55,7 +55,7 @@ const Products = () => {
           </div>
 
           <div className="cars1-main">
-            {propertiesData.slice(0, 3).map((property) => (
+            {getRandomFeaturedProperties().map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}
           </div>
