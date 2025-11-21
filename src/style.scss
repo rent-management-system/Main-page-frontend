@@ -712,130 +712,203 @@ ul {
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
   max-width: 1460px;
 }
+//* Property Card Container */
 .cars-cont {
   max-width: 365px;
-  padding: 13px 1rem 0;
-  height: 380px;
+  padding: 0;
+  height: 420px;
   background-color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
   position: relative;
   margin-bottom: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e0e0e0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.prod {
-  width: 80%;
+
+.cars-cont:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
-#bd .prod1 {
-  width: 90%;
-}
-#bd .prod7 {
-  width: 100%;
-}
-#bd .prod6 {
-  width: 90%;
-}
-#bd .prod8 {
-  width: 100%;
-}
-.car-info {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template: 1fr 1fr / repeat(3, 1fr);
-  justify-items: center;
-}
-.car-info > * {
-  opacity: 0.85;
-  font-size: 1vw;
-}
+
+/* Property Header */
 .car-info-cont1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  padding: 15px 20px;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
 }
-.car-info-cont1 div {
-  display: flex;
-  align-items: center;
-}
+
 .car-info-cont1 h1 {
-  font-size: 1rem;
-  padding: 1rem 1rem;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.2rem;
   margin: 0;
-  flex: 172px;
   background: #00000017;
   text-align: center;
   border-radius: 2rem;
+  font-weight: 600;
+  color: #222a2f;
 }
-.car-info-cont1 img {
-  max-width: 30px;
+
+.car-info-cont1 div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+.car-info-cont1 i {
+  color: #22c55e;
+  font-size: 1.1rem;
+}
+
 .car-info-cont1 p {
   margin: 0;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
+
+/* Image Container with Hover Effects */
+.car-cont1 {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: white;
+  overflow: hidden;
+}
+
+.car-cont1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom effect on hover */
+.cars-cont:hover .car-cont1 img {
+  transform: scale(1.05);
+}
+
+/* Overlay on hover */
+.car-cont1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cars-cont:hover .car-cont1::after {
+  opacity: 1;
+}
+
+/* Property Details */
 .car-info-cont2 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.car-info > *:nth-child(1) {
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-}
-.car-info img {
-  max-width: 43px;
-}
-.car-info-cont2 > *:nth-child(2) {
   width: 100%;
-  position: absolute;
-  bottom: -40px;
-  height: 50px;
+  background: white;
+  padding: 20px;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.car-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.car-info > div {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #c9dff4;
+  text-align: center;
+  gap: 5px;
 }
+
+.car-info i {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.car-info img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+}
+
+.car-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Price and Reserve Button */
 .buy {
-  transition: 0.3s;
-  cursor: pointer;
-   text-align: center;
+  width: 100%;
+  text-align: center;
 }
-// .buy p {
-//   margin: 0;
-//   font-size: 1.4rem;
-//   font-weight: 500;
-//   font-family: "Montserrat";
-//   position: relative;
-//   transition: opacity 0.3s;
-// }
-// .cars-cont:nth-child(1),
-// .cars-cont:nth-child(2),
-// .cars-cont:nth-child(3),
-// .cars-cont:nth-child(4) {
-//   margin-bottom: 2.5rem;
-// }
-// .buy a {
-//   content: "";
-//   position: absolute;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   text-align: center;
-//   bottom: 0;
-//   width: 100%;
-//   height: 0;
-//   transition: 0.3s;
-//   background-color: #222a2f;
-//   font-size: 1.4rem;
-//   font-weight: 500;
-//   font-family: "Montserrat";
-// }
-.buy:hover a {
-  height: 100%;
+
+.price-tag {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222a2f;
+  margin-bottom: 12px;
 }
+
+.buy a {
+  display: block;
+  background: #222a2f;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #222a2f;
+}
+
+.buy a:hover {
+  background: white;
+  color: #222a2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure all text is visible */
+.cars-cont * {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Specific image adjustments for different property types */
+.prod.apartment {
+  /* Additional apartment-specific styles */
+}
+
+.prod.condominium {
+  /* Additional condominium-specific styles */
+}
+
+.prod.house {
+  /* Additional house-specific styles */
+}
+
 .buy p:nth-child(2) {
   opacity: 0;
   z-index: 10;
@@ -906,6 +979,306 @@ ul {
 .type-truck .prod,
 .type-van .prod {
   width: 100%;
+}
+/* View More Button */
+.view-more-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #222a2f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.view-more-btn:hover {
+  background: white;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.view-more-btn i {
+  font-size: 0.7rem;
+}
+
+/* Full Photo Modal */
+.photo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.photo-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: scale(0.7);
+  transition: transform 0.3s ease;
+}
+
+.photo-modal.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.modal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-size: 1.2rem;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.modal-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.modal-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.modal-detail i {
+  font-size: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-action-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.modal-action-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Navigation arrows */
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.modal-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modal-prev {
+  left: 20px;
+}
+
+.modal-next {
+  right: 20px;
+}
+
+/* Zoom controls */
+.zoom-controls {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zoom-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-size: 1.2rem;
+}
+
+.zoom-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Update car-cont1 for proper button positioning */
+.car-cont1 {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: white;
+  overflow: hidden;
+}
+
+.car-cont1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+  
+  .modal-header {
+    padding: 15px;
+  }
+  
+  .modal-title {
+    font-size: 1.2rem;
+  }
+  
+  .modal-footer {
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .modal-details {
+    gap: 10px;
+  }
+  
+  .modal-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .modal-prev {
+    left: 10px;
+  }
+  
+  .modal-next {
+    right: 10px;
+  }
+  
+  .view-more-btn {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
 }
 @media screen and (max-width: 1280px) {
   .cars-main {
