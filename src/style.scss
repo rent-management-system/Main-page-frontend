@@ -77,6 +77,16 @@ body {
     -webkit-transform: rotate(0deg);
   }
 }
+
+// Add the standard @keyframes rule
+@keyframes rotating {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 .nav-child3 {
   justify-content: flex-end;
   gap: 1.5rem;
@@ -390,17 +400,7 @@ body {
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
-          .li {
-            list-style: none;
-            font-size: 24px;
-            color: #fff;
-            line-height: 2.2;
-            text-transform: uppercase;
-            letter-spacing: 1.7px;
-            cursor: pointer;
-            &:before {
-            }
-          }
+          
         }
       }
       .li a {
@@ -896,18 +896,6 @@ ul {
   opacity: 1 !important;
 }
 
-/* Specific image adjustments for different property types */
-.prod.apartment {
-  /* Additional apartment-specific styles */
-}
-
-.prod.condominium {
-  /* Additional condominium-specific styles */
-}
-
-.prod.house {
-  /* Additional house-specific styles */
-}
 
 .buy p:nth-child(2) {
   opacity: 0;
