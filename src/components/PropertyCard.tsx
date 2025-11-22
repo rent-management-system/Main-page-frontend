@@ -4,87 +4,177 @@ import { useTranslation } from 'react-i18next';
 
 interface PropertyCardProps {
   property: Property;
-  allProperties?: Property[]; // For navigation between properties
 }
 
-const PropertyCard: React.FC<PropertyCardProps> = ({ property, allProperties = [] }) => {
+const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [zoomLevel, setZoomLevel] = useState(1);
 
+  // Safe translation with fallbacks
+  const safeTranslate = (key: string, fallback: string = '') => {
+    const translation = t(key);
+    return translation === key ? fallback : translation;
+  };
+
+  // Get display name with fallback
+  const getDisplayName = () => {
+    const translated = safeTranslate(property.name);
+    if (translated) return translated;
+    
+    // Fallback to readable names based on the key
+    const fallbacks: { [key: string]: string } = {
+      'apartment_sunrise_name': 'Sunrise Apartment (2-Bed)',
+      'apartment_city_studio_name': 'City View Studio',
+      'apartment_green_flat_name': 'Green Valley Flat',
+      'apartment_lakeside_name': 'Lakeside Apartment',
+      'apartment_highrise_penthouse_name': 'Highrise Penthouse',
+      'apartment_suburban_loft_name': 'Suburban Loft',
+      'apartment_urban_core_name': 'Urban Core Apartment',
+      'apartment_modern_studio_name': 'Modern Studio',
+      'condominium_riverside_name': 'Riverside Condominium',
+      'condominium_parkside_name': 'Parkside Condominium',
+      'condominium_skyline_name': 'Skyline Condominium',
+      'condominium_garden_view_name': 'Garden View Condominium',
+      'condominium_luxury_suite_name': 'Luxury Suite Condominium',
+      'condominium_urban_loft_name': 'Urban Loft Condominium',
+      'condominium_modern_city_name': 'Modern City Condominium',
+      'condominium_elegant_unit_name': 'Elegant Unit Condominium',
+      'house_garden_family_name': 'Garden Family House',
+      'house_suburban_family_name': 'Suburban Family House',
+      'house_luxury_villa_name': 'Luxury Villa',
+      'house_cozy_cottage_name': 'Cozy Cottage',
+      'house_modern_townhouse_name': 'Modern Townhouse',
+      'house_rural_farmhouse_name': 'Rural Farmhouse',
+      'house_beachfront_property_name': 'Beachfront Property',
+      'house_historic_home_name': 'Historic Home'
+    };
+    
+    return fallbacks[property.name] || property.name.replace(/_/g, ' ');
+  };
+
+  // Get display bedrooms with fallback
+  const getDisplayBedrooms = () => {
+    const translated = safeTranslate(property.bedrooms);
+    if (translated && translated !== property.bedrooms) return translated;
+    
+    const fallbacks: { [key: string]: string } = {
+      'bedrooms_studio': 'Studio',
+      'bedrooms_1': '1 Bedroom',
+      'bedrooms_2': '2 Bedrooms',
+      'bedrooms_3': '3 Bedrooms',
+      'bedrooms_4': '4 Bedrooms',
+      'bedrooms_5': '5 Bedrooms'
+    };
+    
+    return fallbacks[property.bedrooms] || property.bedrooms.replace('bedrooms_', '').replace('_', ' ') + ' Bedrooms';
+  };
+
+  // Get display area with fallback
+  const getDisplayArea = () => {
+    const translated = safeTranslate(property.area);
+    if (translated && translated !== property.area) return translated;
+    
+    return property.area.replace('area_', '').replace('_sqm', ' m²').replace('_', ' ');
+  };
+
+  // Get display furnishing with fallback
+  const getDisplayFurnishing = () => {
+    const key = `furnishing_${property.furnishing.toLowerCase()}`;
+    const translated = safeTranslate(key);
+    if (translated && translated !== key) return translated;
+    
+    return property.furnishing;
+  };
+
+  // Error handlers
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
-    target.src = '/default-property.jpg';
+    
+    // Create a nice placeholder using data URL
+    const placeholderSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+        <rect width="400" height="300" fill="#f5f7fa"/>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f5f7fa"/>
+          <stop offset="100%" stop-color="#c3cfe2"/>
+        </linearGradient>
+        <rect width="400" height="300" fill="url(#grad)"/>
+        <path d="M150 150 L150 230 L250 230 L250 150 Z" fill="#8193b2"/>
+        <path d="M140 150 L200 100 L260 150 Z" fill="#5a6c8c"/>
+        <rect x="185" y="180" width="30" height="50" fill="#4a5a7a"/>
+        <text x="200" y="270" text-anchor="middle" font-family="Arial" font-size="16" fill="#666" font-weight="bold">
+          Property Image
+        </text>
+      </svg>
+    `;
+    target.src = `data:image/svg+xml;base64,${btoa(placeholderSVG)}`;
+  };
+
+  const handleAreaIconError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const target = e.target as HTMLImageElement;
+    const areaIconSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#666">
+        <rect x="3" y="3" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="7" y="7" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    `;
+    target.src = `data:image/svg+xml;base64,${btoa(areaIconSVG)}`;
+  };
+
+  const handleModalImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const target = e.target as HTMLImageElement;
+    
+    const placeholderSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+        <rect width="600" height="400" fill="#f5f7fa"/>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f5f7fa"/>
+          <stop offset="100%" stop-color="#c3cfe2"/>
+        </linearGradient>
+        <rect width="600" height="400" fill="url(#grad)"/>
+        <path d="M200 150 L200 280 L400 280 L400 150 Z" fill="#8193b2"/>
+        <path d="M180 150 L300 80 L420 150 Z" fill="#5a6c8c"/>
+        <rect x="270" y="200" width="60" height="80" fill="#4a5a7a"/>
+        <text x="300" y="350" text-anchor="middle" font-family="Arial" font-size="20" fill="#666" font-weight="bold">
+          Property Image Not Available
+        </text>
+      </svg>
+    `;
+    target.src = `data:image/svg+xml;base64,${btoa(placeholderSVG)}`;
   };
 
   const openModal = () => {
     setIsModalOpen(true);
-    setZoomLevel(1);
-    // Find current property index for navigation
-    if (allProperties.length > 0) {
-      const index = allProperties.findIndex(p => p.id === property.id);
-      setCurrentImageIndex(index);
-    }
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setZoomLevel(1);
   };
-
-  const nextImage = () => {
-    if (allProperties.length > 0) {
-      setCurrentImageIndex((prev) => (prev + 1) % allProperties.length);
-      setZoomLevel(1);
-    }
-  };
-
-  const prevImage = () => {
-    if (allProperties.length > 0) {
-      setCurrentImageIndex((prev) => (prev - 1 + allProperties.length) % allProperties.length);
-      setZoomLevel(1);
-    }
-  };
-
-  const zoomIn = () => {
-    setZoomLevel(prev => Math.min(prev + 0.25, 3));
-  };
-
-  const zoomOut = () => {
-    setZoomLevel(prev => Math.max(prev - 0.25, 1));
-  };
-
-  const resetZoom = () => {
-    setZoomLevel(1);
-  };
-
-  const currentProperty = allProperties.length > 0 ? allProperties[currentImageIndex] : property;
 
   return (
     <>
       <div className="cars-cont" key={property.id}>
         {/* Property Header with Name and Availability */}
         <div className="car-info-cont1">
-          <h1>{t(property.name)}</h1>
+          <h1>{getDisplayName()}</h1>
           <div>
             <i className="fa-solid fa-tag"></i>
-            <p>{t('available')}</p>
+            <p>{safeTranslate('available', 'Available')}</p>
           </div>
         </div>
         
-        {/* Property Image with Hover Effects and View More Button */}
+        {/* Property Image */}
         <div className="car-cont1">
           <img 
             className={`prod ${property.type}`} 
             src={property.image} 
-            alt={t(property.name)}
+            alt={getDisplayName()}
             onError={handleImageError}
             loading="lazy"
           />
           <button className="view-more-btn" onClick={openModal}>
             <i className="fa-solid fa-expand"></i>
-            {t('view_more')}
+            {safeTranslate('view_more', 'View More')}
           </button>
         </div>
         
@@ -94,19 +184,23 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, allProperties = [
             {/* Bedrooms */}
             <div>
               <i className="fa-solid fa-bed"></i>
-              <p>{t(property.bedrooms)}</p>
+              <p>{getDisplayBedrooms()}</p>
             </div>
             
             {/* Furnishing */}
             <div>
               <i className="fa-solid fa-couch"></i>
-              <p>{t(`furnishing_${property.furnishing.toLowerCase()}`)}</p>
+              <p>{getDisplayFurnishing()}</p>
             </div>
             
             {/* Area */}
             <div>
-              <img src="area.png" alt="Area" onError={handleImageError} />
-              <p>{t(property.area)}</p>
+              <img 
+                src="/area.png" 
+                alt="Area" 
+                onError={handleAreaIconError}
+              />
+              <p>{getDisplayArea()}</p>
             </div>
           </div>
           
@@ -118,7 +212,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, allProperties = [
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('reserve_now')}
+              {safeTranslate('reserve_now', 'Reserve Now')}
             </a>
           </div>
         </div>
@@ -128,21 +222,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, allProperties = [
       {isModalOpen && (
         <div className={`photo-modal ${isModalOpen ? 'active' : ''}`}>
           <div className="modal-content">
-            {/* Navigation Arrows */}
-            {allProperties.length > 1 && (
-              <>
-                <button className="modal-nav modal-prev" onClick={prevImage}>
-                  <i className="fa-solid fa-chevron-left"></i>
-                </button>
-                <button className="modal-nav modal-next" onClick={nextImage}>
-                  <i className="fa-solid fa-chevron-right"></i>
-                </button>
-              </>
-            )}
-
             {/* Header */}
             <div className="modal-header">
-              <h2 className="modal-title">{t(currentProperty.name)}</h2>
+              <h2 className="modal-title">{getDisplayName()}</h2>
               <button className="modal-close" onClick={closeModal}>
                 <i className="fa-solid fa-times"></i>
               </button>
@@ -151,50 +233,36 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, allProperties = [
             {/* Image */}
             <img 
               className="modal-image"
-              src={currentProperty.image} 
-              alt={t(currentProperty.name)}
-              style={{ transform: `scale(${zoomLevel})` }}
-              onError={handleImageError}
+              src={property.image} 
+              alt={getDisplayName()}
+              onError={handleModalImageError}
             />
-
-            {/* Zoom Controls */}
-            <div className="zoom-controls">
-              <button className="zoom-btn" onClick={zoomIn} title="Zoom In">
-                <i className="fa-solid fa-magnifying-glass-plus"></i>
-              </button>
-              <button className="zoom-btn" onClick={zoomOut} title="Zoom Out">
-                <i className="fa-solid fa-magnifying-glass-minus"></i>
-              </button>
-              <button className="zoom-btn" onClick={resetZoom} title="Reset Zoom">
-                <i className="fa-solid fa-rotate-left"></i>
-              </button>
-            </div>
 
             {/* Footer */}
             <div className="modal-footer">
               <div className="modal-details">
                 <div className="modal-detail">
                   <i className="fa-solid fa-bed"></i>
-                  <span>{t(currentProperty.bedrooms)}</span>
+                  <span>{getDisplayBedrooms()}</span>
                 </div>
                 <div className="modal-detail">
                   <i className="fa-solid fa-couch"></i>
-                  <span>{t(`furnishing_${currentProperty.furnishing.toLowerCase()}`)}</span>
+                  <span>{getDisplayFurnishing()}</span>
                 </div>
                 <div className="modal-detail">
                   <i className="fa-solid fa-ruler-combined"></i>
-                  <span>{t(currentProperty.area)}</span>
+                  <span>{getDisplayArea()}</span>
                 </div>
                 <div className="modal-detail">
                   <i className="fa-solid fa-tag"></i>
-                  <span>{currentProperty.price}</span>
+                  <span>{property.price}</span>
                 </div>
               </div>
               
               <div className="modal-actions">
                 <button className="modal-action-btn" onClick={closeModal}>
                   <i className="fa-solid fa-xmark"></i>
-                  Close
+                  {safeTranslate('close', 'Close')}
                 </button>
                 <a 
                   href="https://rental-user-management-frontend.vercel.app/login"
@@ -204,7 +272,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, allProperties = [
                   style={{ textDecoration: 'none' }}
                 >
                   <i className="fa-solid fa-calendar-check"></i>
-                  {t('reserve_now')}
+                  {safeTranslate('reserve_now', 'Reserve Now')}
                 </a>
               </div>
             </div>
