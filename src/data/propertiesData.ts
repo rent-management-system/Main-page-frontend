@@ -294,7 +294,6 @@ export const getTranslatedProperties = (t: (key: string) => string, language: st
       ...property,
       name: t(property.name),
       price: displayPrice,
-      furnishing: property.furnishing ? t(property.furnishing) : undefined,
       bedrooms: t(property.bedrooms),
       area: t(property.area),
     };
