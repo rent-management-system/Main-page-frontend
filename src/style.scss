@@ -664,6 +664,7 @@ ul {
 @media screen and (max-width: 900px) {
   .cars1-main {
     flex-wrap: wrap;
+    justify-content: center;
   }
   .cars3-main-child {
     flex-basis: 100%;

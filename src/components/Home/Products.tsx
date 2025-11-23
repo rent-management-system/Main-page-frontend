@@ -6,7 +6,7 @@ import Condominiums from "./Condominiums.tsx";
 import Reserve from "./Reserve.tsx";
 import { MyContext } from "../../context/MyContext.tsx";
 import { useTranslation } from 'react-i18next';
-import { getRandomFeaturedProperties } from "../../data/propertiesData.ts";
+import { getRandomFeaturedProperties, getTranslatedProperties } from "../../data/propertiesData.ts";
 import PropertyCard from "../PropertyCard.tsx";
 
 interface ClickedTabsState {
@@ -17,7 +17,7 @@ interface ClickedTabsState {
 }
 
 const Products = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const {} = useContext(MyContext) as any;
   const [clickedTabs, setClickedTabs] = useState<ClickedTabsState>({
     A: true,
@@ -41,6 +41,9 @@ const Products = () => {
     });
   };
 
+  const featuredProperties = getTranslatedProperties(t, i18n.language);
+  const randomFeaturedProperties = getRandomFeaturedProperties().map(p => featuredProperties.find(fp => fp.id === p.id)!);
+
   return (
     <div className="products" id="product">
       <img className="back2" src="back_n2.png" alt="" />
@@ -55,7 +58,7 @@ const Products = () => {
           </div>
 
           <div className="cars1-main">
-            {getRandomFeaturedProperties().map((property) => (
+            {randomFeaturedProperties.map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}
           </div>

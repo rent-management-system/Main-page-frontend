@@ -10,83 +10,6 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Safe translation with fallbacks
-  const safeTranslate = (key: string, fallback: string = '') => {
-    const translation = t(key);
-    return translation === key ? fallback : translation;
-  };
-
-  // Get display name with fallback
-  const getDisplayName = () => {
-    const translated = safeTranslate(property.name);
-    if (translated) return translated;
-    
-    // Fallback to readable names based on the key
-    const fallbacks: { [key: string]: string } = {
-      'apartment_sunrise_name': 'Sunrise Apartment (2-Bed)',
-      'apartment_city_studio_name': 'City View Studio',
-      'apartment_green_flat_name': 'Green Valley Flat',
-      'apartment_lakeside_name': 'Lakeside Apartment',
-      'apartment_highrise_penthouse_name': 'Highrise Penthouse',
-      'apartment_suburban_loft_name': 'Suburban Loft',
-      'apartment_urban_core_name': 'Urban Core Apartment',
-      'apartment_modern_studio_name': 'Modern Studio',
-      'condominium_riverside_name': 'Riverside Condominium',
-      'condominium_parkside_name': 'Parkside Condominium',
-      'condominium_skyline_name': 'Skyline Condominium',
-      'condominium_garden_view_name': 'Garden View Condominium',
-      'condominium_luxury_suite_name': 'Luxury Suite Condominium',
-      'condominium_urban_loft_name': 'Urban Loft Condominium',
-      'condominium_modern_city_name': 'Modern City Condominium',
-      'condominium_elegant_unit_name': 'Elegant Unit Condominium',
-      'house_garden_family_name': 'Garden Family House',
-      'house_suburban_family_name': 'Suburban Family House',
-      'house_luxury_villa_name': 'Luxury Villa',
-      'house_cozy_cottage_name': 'Cozy Cottage',
-      'house_modern_townhouse_name': 'Modern Townhouse',
-      'house_rural_farmhouse_name': 'Rural Farmhouse',
-      'house_beachfront_property_name': 'Beachfront Property',
-      'house_historic_home_name': 'Historic Home'
-    };
-    
-    return fallbacks[property.name] || property.name.replace(/_/g, ' ');
-  };
-
-  // Get display bedrooms with fallback
-  const getDisplayBedrooms = () => {
-    const translated = safeTranslate(property.bedrooms);
-    if (translated && translated !== property.bedrooms) return translated;
-    
-    const fallbacks: { [key: string]: string } = {
-      'bedrooms_studio': 'Studio',
-      'bedrooms_1': '1 Bedroom',
-      'bedrooms_2': '2 Bedrooms',
-      'bedrooms_3': '3 Bedrooms',
-      'bedrooms_4': '4 Bedrooms',
-      'bedrooms_5': '5 Bedrooms'
-    };
-    
-    return fallbacks[property.bedrooms] || property.bedrooms.replace('bedrooms_', '').replace('_', ' ') + ' Bedrooms';
-  };
-
-  // Get display area with fallback
-  const getDisplayArea = () => {
-    const translated = safeTranslate(property.area);
-    if (translated && translated !== property.area) return translated;
-    
-    return property.area.replace('area_', '').replace('_sqm', ' m²').replace('_', ' ');
-  };
-
-  // Get display furnishing with fallback
-  const getDisplayFurnishing = () => {
-    const key = `furnishing_${property.furnishing.toLowerCase()}`;
-    const translated = safeTranslate(key);
-    if (translated && translated !== key) return translated;
-    
-    return property.furnishing;
-  };
-
-  // Error handlers
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
     
@@ -156,10 +79,10 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
       <div className="cars-cont" key={property.id}>
         {/* Property Header with Name and Availability */}
         <div className="car-info-cont1">
-          <h1>{getDisplayName()}</h1>
+          <h1>{t(property.name)}</h1>
           <div>
             <i className="fa-solid fa-tag"></i>
-            <p>{safeTranslate('available', 'Available')}</p>
+            <p>{t('available')}</p>
           </div>
         </div>
         
@@ -168,13 +91,13 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           <img 
             className={`prod ${property.type}`} 
             src={property.image} 
-            alt={getDisplayName()}
+            alt={t(property.name)}
             onError={handleImageError}
             loading="lazy"
           />
           <button className="view-more-btn" onClick={openModal}>
             <i className="fa-solid fa-expand"></i>
-            {safeTranslate('view_more', 'View More')}
+            {t('view_more')}
           </button>
         </div>
         
@@ -184,14 +107,16 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
             {/* Bedrooms */}
             <div>
               <i className="fa-solid fa-bed"></i>
-              <p>{getDisplayBedrooms()}</p>
+              <p>{t(property.bedrooms)}</p>
             </div>
             
             {/* Furnishing */}
-            <div>
-              <i className="fa-solid fa-couch"></i>
-              <p>{getDisplayFurnishing()}</p>
-            </div>
+            {property.furnishing && (
+              <div>
+                <i className="fa-solid fa-couch"></i>
+                <p>{t(property.furnishing)}</p>
+              </div>
+            )}
             
             {/* Area */}
             <div>
@@ -200,7 +125,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
                 alt="Area" 
                 onError={handleAreaIconError}
               />
-              <p>{getDisplayArea()}</p>
+              <p>{t(property.area)}</p>
             </div>
           </div>
           
@@ -208,11 +133,11 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           <div className="buy">
             <span className="price-tag">{property.price}</span>
             <a 
-              href="https://rental-user-management-frontend.vercel.app/login"
+              href="https://rental-user-management-frontend.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {safeTranslate('reserve_now', 'Reserve Now')}
+              {t('reserve_now')}
             </a>
           </div>
         </div>
@@ -224,7 +149,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           <div className="modal-content">
             {/* Header */}
             <div className="modal-header">
-              <h2 className="modal-title">{getDisplayName()}</h2>
+              <h2 className="modal-title">{t(property.name)}</h2>
               <button className="modal-close" onClick={closeModal}>
                 <i className="fa-solid fa-times"></i>
               </button>
@@ -234,7 +159,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
             <img 
               className="modal-image"
               src={property.image} 
-              alt={getDisplayName()}
+              alt={t(property.name)}
               onError={handleModalImageError}
             />
 
@@ -243,15 +168,17 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
               <div className="modal-details">
                 <div className="modal-detail">
                   <i className="fa-solid fa-bed"></i>
-                  <span>{getDisplayBedrooms()}</span>
+                  <span>{t(property.bedrooms)}</span>
                 </div>
+                {property.furnishing && (
                 <div className="modal-detail">
                   <i className="fa-solid fa-couch"></i>
-                  <span>{getDisplayFurnishing()}</span>
+                  <span>{t(property.furnishing)}</span>
                 </div>
+                )}
                 <div className="modal-detail">
                   <i className="fa-solid fa-ruler-combined"></i>
-                  <span>{getDisplayArea()}</span>
+                  <span>{t(property.area)}</span>
                 </div>
                 <div className="modal-detail">
                   <i className="fa-solid fa-tag"></i>
@@ -262,17 +189,17 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
               <div className="modal-actions">
                 <button className="modal-action-btn" onClick={closeModal}>
                   <i className="fa-solid fa-xmark"></i>
-                  {safeTranslate('close', 'Close')}
+                  {t('close')}
                 </button>
                 <a 
-                  href="https://rental-user-management-frontend.vercel.app/login"
+                  href="https://rental-user-management-frontend.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="modal-action-btn"
                   style={{ textDecoration: 'none' }}
                 >
                   <i className="fa-solid fa-calendar-check"></i>
-                  {safeTranslate('reserve_now', 'Reserve Now')}
+                  {t('reserve_now')}
                 </a>
               </div>
             </div>

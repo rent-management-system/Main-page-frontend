@@ -1,13 +1,16 @@
 import Products from "./Home/Products.tsx";
+import { useTranslation } from "react-i18next";
 
 const PropertiesPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="vehicles">
       <div className="vh-cont">
-      <img className="vh_bg1" src="/back_n.png" alt="" />
+        <img className="vh_bg1" src="/back_n.png" alt="" />
         <div className="vh-topic-cont">
-          <h1>Properties</h1>
-          <p>Explore wide range of vehicles from Bete</p>
+          <h1>{t('properties_title_main')}</h1>
+          <p>{t('properties_subtitle_main')}</p>
           <img src="/hr.svg" alt="" />
         </div>
         <div className="vh-main-cont">
@@ -19,32 +22,23 @@ const PropertiesPage = () => {
               <img src="/vh4.png" alt="" />
             </div>
             <div className="vh-descrp-cont">
-              <h1>Bete vehicles</h1>
-              <p>
-                Explore Bete's Properties Page for a curated collection of sleek
-                sedans, SUVs, high-performance sports cars, eco-friendly
-                electric/hybrid vehicles, family-friendly minivans, compact city
-                cars, and powerful trucks. Bete ensures you find the perfect
-                ride for your lifestyle.
-              </p>
+              <h1>{t('bete_properties')}</h1>
+              <p>{t('properties_page_description')}</p>
               <ul>
                 <li>
-                  <b>Electric Propulsion:</b> Bete cars feature advanced
-                  electric propulsion for eco-friendly, high-performance
-                  driving.
+                  <b>{t('diverse_property_types')}</b> {t('diverse_property_types_desc')}
                 </li>
                 <li>
-                  <b>Aerodynamic Design:</b> Bete vehicles showcase a
-                  fuel-efficient, aerodynamic design for a modern and visually
-                  striking aesthetic.
+                  <b>{t('advanced_search_filters')}</b> {t('advanced_search_filters_desc')}
                 </li>
                 <li>
-                  <b>Connectivity Suite:</b> Bete's futuristic connectivity
-                  suite seamlessly integrates navigation, entertainment, and
-                  interaction for an enhanced driving experience.
+                  <b>{t('detailed_property_listings')}</b> {t('detailed_property_listings_desc')}
                 </li>
               </ul>
-              <a href="#rental">Book Your Property</a>
+              <a href="https://rental-user-management-frontend.vercel.app/login" target="_blank" rel="noopener noreferrer">
+  {t('reserve_now_button')}
+</a>
+
             </div>
           </div>
           <img className="bg-vh-img" src="/bg_vh_new.jpg" alt="" />
