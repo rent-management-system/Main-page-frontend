@@ -22,7 +22,7 @@ const ChooseUs = () => {
 
         <div className="choose-cont2">
           <div className="choose-list-cont1">
-            <img src="client1.svg" alt="" />
+            <img src="choose1.svg" alt="" />
             <div>
               <h1>{t('transparent_pricing_title')}</h1>
               <p>
