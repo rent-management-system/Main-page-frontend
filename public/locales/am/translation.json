@@ -4,6 +4,7 @@
   "Properties": "ንብረቶች",
   "testimonials": "ምስክርነቶች",
   "contact": "ያግኙን",
+  "properties": "ንብረቶች",
   "select_language": "ቋንቋ ይምረጡ",
   "language": "ቋንቋ",
   "amharic_option": "አማርኛ",
@@ -161,5 +162,8 @@
   "send_button": "ላክ",
   "subscribed_success_message": "በተሳካ ሁኔታ ተመዝግቧል!",
   "copyright_text": "©2025, ቤቴ ንብረቶች. ሁሉም መብቶች የተጠበቁ ናቸው።",
-  "ai_assistance_reminder": "የእርስዎ AI እርዳታ እዚህ አለ!"
+  "ai_assistance_reminder": "የእርስዎ AI እርዳታ እዚህ አለ!",
+  "view_more": "የበለጠ እይታ",
+  "reserve_now": "አሁን ይያዙ",
+  "close": "ዝጋ"
 }

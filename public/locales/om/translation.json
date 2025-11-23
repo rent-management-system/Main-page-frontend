@@ -2,6 +2,7 @@
   "home": "Mana",
   "about": "Waa'ee",
   "Properties": "Qabeenya",
+  "properties": "Qabeenya",
   "testimonials": "Ragaalee",
   "contact": "Quunnamtii",
   "select_language": "Afan Filadhu",
@@ -9,11 +10,7 @@
   "amharic_option": "Amaariffa",
   "english_option": "Ingiliffa",
   "afan_oromo_option": "Afan Oromo",
-<<<<<<< HEAD
-  "your_ai_rent_management_system": "Sirna Bulchiinsa Kirraa AI Kee",
-=======
   "your_ai_rent_management_system": "Sirna Bulchiinsa Kiraa AI Kee",
->>>>>>> 3f81bb4 (fix lang issues)
   "Bete_exclamation": "Beetee!",
   "sign_up": "Galmaa'i",
   "view_properties": "Qabeenya Ilaali",
@@ -165,5 +162,8 @@
   "send_button": "Ergi",
   "subscribed_success_message": "Milkaa'inaan Galmaa'e!",
   "copyright_text": "©2025, Qabeenya Baatee. Mirgoonni Hunduu Eegamaadha.",
-  "ai_assistance_reminder": "Gargaarsi AI Kee As Jira!"
+  "ai_assistance_reminder": "Gargaarsi AI Kee As Jira!",
+  "view_more": "Dabalata Ilaali",
+  "reserve_now": "Amma Qabaadhu",
+  "close": "Cufi"
 }

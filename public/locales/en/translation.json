@@ -2,6 +2,7 @@
   "home": "Home",
   "about": "About",
   "properties": "Properties",
+  "Properties": "Properties",
   "testimonials": "Testimonials",
   "contact": "Contact",
   "select_language": "Select Language",
@@ -167,4 +168,8 @@
   "initial_bot_message": "Hello! How can I help you today?",
   "type_your_message": "Type your message...",
   "send": "Send"
+  ,
+  "view_more": "View More",
+  "reserve_now": "Reserve Now",
+  "close": "Close"
 }
