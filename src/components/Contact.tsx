@@ -2,8 +2,10 @@ import Header from "./Home/Header.tsx";
 import Footer from "./Footer.tsx";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [isSent, setIsSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
@@ -40,12 +42,9 @@ const Contact = () => {
       <img src="contact_bg.png" alt="" />
       <div className="contc-cont">
         <div className="contc-descrp">
-          <h1>Need additional information?</h1>
+          <h1>{t('need_additional_information')}</h1>
           <p>
-            Got questions about your dream home? We've got answers. You've come
-            to the right place for all the answers. Our team is here to help you
-            navigate through any questions you may have, providing clear and
-            straightforward information.
+            {t('contact_page_description')}
           </p>
           <div className="info-cont">
             <i className="fa-solid fa-square-phone"></i>
@@ -66,37 +65,37 @@ const Contact = () => {
             className="confirm-cont"
           >
             <img src="check.png" alt="" />
-            <p>Sent succesfully!</p>
+            <p>{t('sent_successfully')}</p>
           </div>
           <label htmlFor="name">
-            Name<b>*</b>
+            {t('name')}<b>*</b>
           </label>
           <input
             type="name"
-            placeholder="Enter Your Name"
+            placeholder={t('enter_your_name')}
             name="user_name"
             id="name"
           />
           <label htmlFor="email">
-            Email<b>*</b>
+            {t('email')}<b>*</b>
           </label>
           <input
             type="email"
-            placeholder="Enter Email Address"
+            placeholder={t('enter_email_address')}
             name="user_email"
             id="email"
           />
           <label htmlFor="textarea">
-            Textarea<b>*</b>
+            {t('textarea')}<b>*</b>
           </label>
           <textarea
             name="message"
             id="textarea"
             cols={30}
             rows={10}
-            placeholder="Write Your Message Here..."
+            placeholder={t('write_your_message_here')}
           ></textarea>
-          <input type="submit" value="Send" />
+          <input type="submit" value={t('send')} />
         </form>
       </div>
 
@@ -105,4 +104,3 @@ const Contact = () => {
   );
 };
 export default Contact;
-

@@ -2,15 +2,23 @@ import ChooseUs from "./ChooseUs.tsx";
 import Testimonial from "./Testimonial.tsx";
 import BasicAccordion from "./Faq.tsx";
 import Footer from "../Footer.tsx";
-import PropertyCard from "../PropertyCard.tsx"; // Import the new PropertyCard component
-import { getRandomAllProperties } from "../../data/propertiesData.ts"; // Import the random properties function
-import type { Property } from "../../types/property.ts"; // Import the Property interface
+import PropertyCard from "../PropertyCard.tsx";
+import { getRandomAllProperties, getTranslatedProperties } from "../../data/propertiesData.ts";
+import type { Property } from "../../types/property.ts";
+import { useTranslation } from "react-i18next";
 
 interface AllPropertiesProps {
   clickState: boolean;
 }
 
 const AllProperties: React.FC<AllPropertiesProps> = (props) => {
+  const { t, i18n } = useTranslation();
+  const randomProperties = getRandomAllProperties();
+  const translatedProperties = getTranslatedProperties(t, i18n.language);
+
+  const propertiesToRender = randomProperties.map(p => translatedProperties.find(tp => tp.id === p.id)!);
+
+
   return (
     <div
       style={{
@@ -20,7 +28,7 @@ const AllProperties: React.FC<AllPropertiesProps> = (props) => {
       className="type-property type"
     >
       <div className="cars-main">
-        {getRandomAllProperties().map((property: Property) => (
+        {propertiesToRender.map((property: Property) => (
           <PropertyCard key={property.id} property={property} />
         ))}
       </div>

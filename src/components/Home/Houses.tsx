@@ -2,16 +2,18 @@ import ChooseUs from "./ChooseUs.tsx";
 import Testimonial from "./Testimonial.tsx";
 import BasicAccordion from "./Faq.tsx";
 import Footer from "../Footer.tsx";
-import PropertyCard from "../PropertyCard.tsx"; // Import the new PropertyCard component
-import { propertiesData } from "../../data/propertiesData.ts"; // Import the consolidated data
-import type { Property } from "../../types/property.ts"; // Import the Property interface
+import PropertyCard from "../PropertyCard.tsx";
+import { getTranslatedProperties } from "../../data/propertiesData.ts";
+import type { Property } from "../../types/property.ts";
+import { useTranslation } from "react-i18next";
 
 interface VanProps {
   clickState: boolean;
 }
 
 const Houses: React.FC<VanProps> = (props) => {
-  const houseProperties = propertiesData.filter(
+  const { t, i18n } = useTranslation();
+  const houseProperties = getTranslatedProperties(t, i18n.language).filter(
     (property: Property) => property.type === "house"
   );
 
@@ -21,7 +23,7 @@ const Houses: React.FC<VanProps> = (props) => {
         opacity: props.clickState ? "1" : "0",
         zIndex: props.clickState ? "10" : "",
       }}
-      className="type-van type" // This class name might need to be updated to reflect "house"
+      className="type-van type"
     >
       <div className="cars-main">
         {houseProperties.map((property: Property) => (

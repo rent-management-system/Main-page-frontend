@@ -167,9 +167,37 @@
   "close_button": "X",
   "initial_bot_message": "Hello! How can I help you today?",
   "type_your_message": "Type your message...",
-  "send": "Send"
-  ,
-  "view_more": "View More",
-  "reserve_now": "Reserve Now",
-  "close": "Close"
+  "send": "Send",
+  "month": "month",
+
+  "need_additional_information": "Need additional information?",
+  "contact_page_description": "Got questions about your dream home? We've got answers. You've come to the right place for all the answers. Our team is here to help you navigate through any questions you may have, providing clear and straightforward information.",
+  "name": "Name",
+  "enter_your_name": "Enter Your Name",
+  "email": "Email",
+  "enter_email_address": "Enter Email Address",
+  "textarea": "Textarea",
+  "write_your_message_here": "Write Your Message Here...",
+  "sent_successfully": "Sent successfully!",
+
+  "properties_title_main": "Properties",
+  "properties_subtitle_main": "Explore a wide range of properties from Bete",
+  "bete_properties": "Bete Properties",
+  "properties_page_description": "Explore Bete's Properties Page for a curated collection of apartments, condominiums, and houses. Bete ensures you find the perfect home for your lifestyle.",
+  "diverse_property_types": "Diverse Property Types:",
+  "diverse_property_types_desc": "From modern apartments to spacious family houses, find a home that fits your needs.",
+  "advanced_search_filters": "Advanced Search Filters:",
+  "advanced_search_filters_desc": "Easily narrow down your options with filters for location, price, size, and amenities.",
+  "detailed_property_listings": "Detailed Property Listings:",
+  "detailed_property_listings_desc": "Each listing includes high-quality photos, detailed descriptions, and landlord contact information.",
+  "reserve_now_button": "Reserve Now",
+
+  "complete_reservation": "COMPLETE RESERVATION",
+  "upon_completing_reservation": "Upon completing this reservation, you will receive:",
+  "confirmation_email_message": "A confirmation email with detailed information about your selected property and next steps to finalize your purchase.",
+  "property_information": "Property Information",
+  "property_category": "Property Category",
+  "property_label": "PROPERTY:",
+  "cancel": "Cancel",
+  "reserve": "Reserve"
 }

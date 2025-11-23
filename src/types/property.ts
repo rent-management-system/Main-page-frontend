@@ -4,7 +4,7 @@ export interface Property {
   name: string;
   image: string;
   price: string;
-  furnishing: 'Furnished' | 'Unfurnished';
+  furnishing?: 'Furnished' | 'Unfurnished';
   bedrooms: string;
   area: string;
 }
