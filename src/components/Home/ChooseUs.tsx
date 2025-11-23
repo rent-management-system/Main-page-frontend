@@ -32,7 +32,7 @@ const ChooseUs = () => {
           </div>
 
           <div className="choose-list-cont2">
-            <img src="choose3.png" alt="" />
+            <img src="client3.svg" alt="" />
             <div>
               <h1>{t('customer_focused_experience_title')}</h1>
               <p>
@@ -42,7 +42,7 @@ const ChooseUs = () => {
           </div>
 
           <div className="choose-list-cont3">
-            <img src="choose2.svg" alt="" />
+            <img src="client2.svg" alt="" />
             <div>
               <h1>{t('verified_listings_title')}</h1>
               <p>

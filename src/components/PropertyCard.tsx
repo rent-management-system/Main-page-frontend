@@ -66,6 +66,15 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
     target.src = `data:image/svg+xml;base64,${btoa(placeholderSVG)}`;
   };
 
+  // Inline area icon to avoid missing public asset requests
+  const areaIconSVGInline = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#666">
+        <rect x="3" y="3" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="7" y="7" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1"/>
+      </svg>
+  `;
+  const areaIconDataUrl = `data:image/svg+xml;base64,${btoa(areaIconSVGInline)}`;
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -121,7 +130,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
             {/* Area */}
             <div>
               <img 
-                src="/area.png" 
+                src={areaIconDataUrl} 
                 alt="Area" 
                 onError={handleAreaIconError}
               />
