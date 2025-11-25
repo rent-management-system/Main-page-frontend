@@ -5,14 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    // Enable minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // Remove console.logs in production
-        drop_debugger: true,
-      },
-    },
+    // Enable minification (esbuild is faster and works better with TypeScript)
+    minify: 'esbuild',
     // Optimize chunk size
     rollupOptions: {
       output: {
@@ -25,7 +19,7 @@ export default defineConfig({
     },
     // Increase chunk size warning limit
     chunkSizeWarningLimit: 1000,
-    // Enable source maps for debugging (disable in production if needed)
+    // Disable source maps in production for smaller bundle size
     sourcemap: false,
   },
   // Optimize dependencies
@@ -40,5 +34,9 @@ export default defineConfig({
   // Preview configuration
   preview: {
     port: 4173,
+  },
+  // ESBuild options for production optimization
+  esbuild: {
+    drop: ['console', 'debugger'],
   },
 })
