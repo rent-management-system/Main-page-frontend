@@ -1994,66 +1994,123 @@ ul {
 .bg div:nth-child(2) {
   display: none;
 }
+/* ================= Choose Us Section - Optimized & Responsive ================= */
 .choose-us-cont {
- // margin-top: 34rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
 }
-.choose-us-cont img {
+
+.choose-us-bg-img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
+
 .choose-main-cont {
   display: flex;
   gap: 2rem;
   max-width: 1375px;
   justify-content: space-between;
   width: 100%;
-  justify-content: space-between;
   margin-top: 5rem;
+  padding: 0 1rem;
 }
+
 .choose-cont1 {
-  flex: 45%;
+  flex: 1 1 45%;
+  max-width: 600px;
 }
-.choose-cont1 p:nth-child(1) {
-  font-size: 1.6rem;
+
+.choose-subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 1rem 0;
+  color: #555;
 }
-.choose-cont1 > :nth-child(3) {
-  max-width: 80%;
+
+.choose-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.choose-description {
+  max-width: 90%;
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+  color: #666;
 }
-.choose-cont1 a {
+
+.choose-learn-more {
+  display: inline-block;
   text-decoration: none;
   color: white;
-  font-weight: 900;
-  font-size: 1.3rem;
-  padding: 10px 3.5rem;
-  background: black;
-  transition: 0.3s;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  padding: 12px 2.5rem;
+  background: #222a2f;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 2px solid #222a2f;
 }
-.choose-cont1 a:hover {
-  box-shadow: 0 4px 15px #0000008a;
+
+.choose-learn-more:hover {
+  background: white;
+  color: #222a2f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 .choose-cont2 {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  flex: 27%;
+  gap: 2rem;
+  flex: 1 1 45%;
+  max-width: 550px;
 }
-.choose-cont2 > * {
+
+.choose-feature-card {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
-.choose-cont2 img {
-  max-width: 100px;
+
+.choose-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
-.choose-cont2 h1 {
-  font-size: 1.4rem;
+
+.choose-feature-card img {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  object-fit: contain;
+}
+
+.choose-feature-content h1 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
   font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #222a2f;
+}
+
+.choose-feature-content p {
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  line-height: 1.6;
+  margin: 0;
+  color: #666;
 }
 @media screen and (max-width: 1200px) {
   .bg h4 {
@@ -2068,36 +2125,35 @@ ul {
     .choose-main-cont {
       flex-direction: column;
       align-items: center;
-      gap: 5rem;
+      gap: 3rem;
+      margin-top: 3rem;
     }
     .choose-cont1 {
       max-width: 800px;
       text-align: center;
     }
-    .choose-cont1 p:nth-child(1) {
-      font-size: 1.9rem;
+    .choose-subtitle {
+      font-size: 1.4rem;
     }
-    .choose-cont1 {
+    .choose-title {
+      font-size: 2.5rem;
       font-weight: 800;
-      margin-top: 10px;
     }
-    .choose-cont1 > :nth-child(3) {
-      font-size: 1.3rem;
-      max-width: 90%;
-      display: inline-block;
-      font-weight: 100;
+    .choose-description {
+      font-size: 1.1rem;
+      max-width: 100%;
+      text-align: center;
     }
-    .choose-cont1 a {
+    .choose-learn-more {
       white-space: nowrap;
+      margin: 0 auto;
     }
     .choose-cont2 {
       max-width: 800px;
+      width: 100%;
     }
-    .choose-cont1 h1 {
-      font-weight: 900;
-    }
-    .choose-list-cont1 p {
-      font-size: 1.3rem;
+    .choose-feature-card {
+      padding: 1.2rem;
     }
     @media screen and (max-width: 900px) {
       .client {
@@ -2124,6 +2180,50 @@ ul {
       .step-main-cont1 h1 {
         font-size: 2rem;
       }
+      /* Mobile Responsive - Small Screens */
+      @media screen and (max-width: 640px) {
+        .choose-main-cont {
+          gap: 2rem;
+          margin-top: 2rem;
+          padding: 0 0.5rem;
+        }
+        .choose-cont1 {
+          padding: 0 1rem;
+        }
+        .choose-subtitle {
+          font-size: 1.1rem;
+        }
+        .choose-title {
+          font-size: 2rem;
+        }
+        .choose-description {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        .choose-learn-more {
+          padding: 10px 2rem;
+          font-size: 1rem;
+        }
+        .choose-feature-card {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 1rem;
+          gap: 1rem;
+        }
+        .choose-feature-card img {
+          width: 50px;
+          height: 50px;
+          min-width: 50px;
+        }
+        .choose-feature-content h1 {
+          font-size: 1.2rem;
+        }
+        .choose-feature-content p {
+          font-size: 0.95rem;
+        }
+      }
+      
       @media screen and (max-width: 392px) {
         .client {
           grid-template: repeat(3, 1fr) / repeat(2, 1fr);
@@ -2131,10 +2231,23 @@ ul {
           padding: 10px;
         }
         .choose-us-cont {
-          margin-top: 41rem;
+          padding: 1rem 0.5rem;
         }
         .choose-main-cont {
-          margin-top: 5vw;
+          margin-top: 1.5rem;
+        }
+        .choose-subtitle {
+          font-size: 1rem;
+        }
+        .choose-title {
+          font-size: 1.8rem;
+        }
+        .choose-description {
+          font-size: 0.9rem;
+        }
+        .choose-learn-more {
+          padding: 8px 1.5rem;
+          font-size: 0.9rem;
         }
       }
     }
@@ -3155,4 +3268,126 @@ body.loading a,
 body.loading p,
 body.loading span {
   font-weight: 500 !important;
+}
+
+/* ================= Performance Optimizations ================= */
+/* GPU Acceleration for smooth animations */
+.cars-cont,
+.choose-feature-card,
+.modal-content,
+.view-more-btn,
+.buy a,
+.choose-learn-more {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize image rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ================= Additional Responsive Improvements ================= */
+/* Ensure all containers are responsive */
+.prod-cont,
+.cars-main,
+.choose-main-cont,
+.book,
+.footer {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive typography base */
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Responsive grid improvements */
+@media screen and (max-width: 768px) {
+  .cars-main {
+    grid-template-columns: 1fr !important;
+    padding: 0 1rem;
+  }
+  
+  .cars-cont {
+    max-width: 100%;
+    margin: 0 auto 2rem;
+  }
+}
+
+/* Touch-friendly button sizes */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  .view-more-btn,
+  .buy a,
+  .choose-learn-more {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Optimize for very small screens */
+@media screen and (max-width: 320px) {
+  .choose-feature-card {
+    padding: 0.8rem;
+  }
+  
+  .choose-feature-card img {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+  
+  .choose-feature-content h1 {
+    font-size: 1rem;
+  }
+  
+  .choose-feature-content p {
+    font-size: 0.85rem;
+  }
 }
