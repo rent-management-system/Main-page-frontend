@@ -31,14 +31,14 @@ const AboutSection = () => {
             <div className="icons-cont">
               <i className="fa-solid fa-warehouse"></i>
               <div>
-                 <h4>50+</h4>
+                 <h4>10+</h4>
                 <p>{t("active_listings")}</p>
               </div>
             </div>
             <div className="icons-cont">
           
               <div>
-                 <h4>100+</h4>
+                 <h4>7+</h4>
                 <p>{t("happy_clients")}</p>
               </div>
             </div>
