@@ -22,7 +22,7 @@ const AboutSection = () => {
           </p>
           <div className="unique-cont">
             <div className="icons-cont">
-              <i className="fa-solid fa-car-side"></i>
+              <i className="fa-solid fa-house-chimney-crack fa-2x"></i>
               <div>
                 <h4>3+</h4>
                 <p>{t("property_types")}</p>

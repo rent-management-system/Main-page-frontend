@@ -5,10 +5,17 @@ import { useTranslation } from 'react-i18next';
 const Footer = () => {
   const { t } = useTranslation();
   const [isSent, setIsSent] = useState(false);
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!email) {
+      setError("enter real email");
+      return;
+    }
 
     if (form.current) {
       emailjs
@@ -79,9 +86,12 @@ const Footer = () => {
             type="email"
             placeholder={t('enter_email_placeholder')}
             name="user_email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input type="submit" value={t('send_button')} />
         </form>
+        {error && <p style={{ color: "red" }}>{error}</p>}
         <div
           style={{ display: isSent ? "flex" : "none" }}
           className="confirm-cont"
